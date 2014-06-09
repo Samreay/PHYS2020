@@ -45,7 +45,7 @@
 h2 {
     margin-top: 30px;
 }
-.question h5 {
+.question .q {
     color: #2f57b5;
     padding-left: 10px;
     border-left: 3px solid #6ac2ff;
@@ -54,4 +54,13 @@ h2 {
 
 .question p {
     padding-left: 20px;
+}
+.activeMenu {
+    background-color: #555;
+}
+.question img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }

@@ -11,8 +11,9 @@ function MainController($scope, $timeout) {
         },
         "HTML-CSS": { availableFonts: ["TeX"] }
     });
-    $scope.active = 'Week 2';
+    $scope.active = 'Contents';
     $scope.menu = [
+        {label: 'Contents', partial: 'partials/contents.html'},
         {label: 'Week 1', partial: 'partials/week1.html'},
         {label: 'Week 2', partial: 'partials/week2.html'},
         {label: 'Week 3', partial: 'partials/week3.html'}
@@ -24,6 +25,9 @@ function MainController($scope, $timeout) {
             }
         }
         return "";
+    }
+    $scope.isActive = function(v) {
+        return v == $scope.active;
     }
     $scope.setActive = function(v) {
         $scope.active = v;

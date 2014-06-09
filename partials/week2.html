@@ -1,14 +1,122 @@
 <h2>Tutorial Content</h2>
 <hr />
+
 <div class="question">
-    <h5 class="question"><strong>S1.27)</strong> Give an example of a process in which no heat is added to a system, but its temperature increases. Then give an example of the opposite: a process in which heat is added to a system but its temperature does not change.</h5>
+    <div class="q">
+        <h5><strong>S1.27)</strong> Give an example of a process in which no heat is added to a system, but its temperature increases. Then give an example of the opposite: a process in which heat is added to a system but its temperature does not change.</h5>
+    </div>
     <p>For the first one, compressing a gas. Thinking pumping a tire: it gets hot. And then I would say.... expanding a gas... it gets cold. Spooky.</p>
 </div>
-<!--<p>\begin{eqnarray*}
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.33)</strong> An ideal gas is made to undergo the cyclic process shown below. For each steps A, B, C determine whether each of the following is positive, negative or zero: (a) the work done on the gas, (b) the change in internal energy of the gas and (c) the heat added to the gas.</h5>
+        <h5>Determine the sign of each of these three quantities for the whole cycle. What does it accomplish?</h5>
+    </div>
+    <p>So, A represents a constant pressure increase in volume. Thus, work is lost in the system (negative). The internal energy, being an ideal gas is proportional to $T$, so it is thus proportional to $PV$. As $PV$ increases so does the internal energy, and so we must also have positive heat flow.</p>
+    <p>B is a constant volume increase in pressure. With no change in volume, there is no work done on the system. However, as $PV$ increases, the internal energy of the system must increase as well. Which means we again have to have positive heat flow.</p>
+    <p>Finally, C is returning to the start of A - so it is decreasing volume at decreasing pressure. Obviously this is now positive work, decreasing energy and thus negative heat flow.</p>
+    <p>As to what this accomplishes, well the system in general doesn't lose or gain energy. However, the work put into the system (area under C) is greater than the work out of the system (under A), the excess energy has to be lost as heat to the environment, so this is a way to convert heat to work.</p>
+</div>
+
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.25)</strong> List all the degrees of freedom, or as many as you can, for a molecule of water vapour</h5>
+    </div>
+    <p>Right, so obviously we have three translational ways of movement. Now, add to this three ways of rotating. Finally, we have three modes of vibration (stretching between H and O, and the relative angle between the H atoms). Which comes to 9. Of course, the vibrational modes will normally be frozen out, but shhhhh.</p>
+</div>
+
+
+
+
+
+
+
+
+<h2>Problem Set Required Questions</h2>
+<hr />
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.23)</strong> Calculate the total thermal energy in a litre of helium at room temperature and atmospheric pressure. Then repeat the calculation for a litre of air.</h5>
+    </div>
+    <p>Right, so Helium is monatomic, so three  degrees of freedom. Let us use the equipartition theorem, but we have to replace temperature using the ideal gas law.</p>
+    <p>\begin{eqnarray*}
+        U &=& \frac{1}{2} f N k T \\
+        &=& \frac{1}{2} f P V \\
+        &=& \frac{1}{2} \cdot 3 \cdot (101\,325 \,\mathrm{Pa})\cdot (0.001 \,\mathrm{m}^3) \\
+        &=& 152 \,\mathrm{J}
+        \end{eqnarray*}</p>
+    <p>For air, we can consider oxygen and nitrogen, which are linear molecules having now 5 degrees of freedom (freeze out the vibrational mode), which gives</p>
+    <p>\begin{eqnarray*}
+        U &=& \frac{1}{2} f N k T \\
+        &=& \frac{1}{2} f P V \\
+        &=& \frac{1}{2} \cdot 5 \cdot (101\,325 \,\mathrm{Pa})\cdot (0.001 \,\mathrm{m}^3) \\
+        &=& 253 \,\mathrm{J}
+        \end{eqnarray*}</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.31)</strong> Imagine some helium in a cylinder with an initial volume of 1 litre and an initial pressure of 1atm. Somehow the helium is made to expand to a final volume of 3 litres, in such a way that its pressure is raised in direct proportion to its volume.</h5>
+        <h5>(a) Sketch a graph of pressure versus volume</h5>
+        <h5>(b) Calculate the work done on the gas</h5>
+        <h5>(c) Calculate the change in the helium's energy content during this process.</h5>
+        <h5>(d) Calculate the amount of heat added to or removed from the helium during this process.</h5>
+        <h5>(e) Describe what you might do to cause the pressure to rise as the helium expands.</h5>
+    </div>
+    <p>(a) The graph would look soemthing like the following:</p>
+    <img src="images/VPGraph.png">
+    <p>(b) The work done is the area under the graph. We could either compute the area of the rectangle and then the triangle. Or we could realise we can make the shape a rectangle by rotating on the point at 2L and 2atm, or we could actually do some math. Because the posted solutions do it graphically, I'll do it with math. Note that as we go from (1L,1atm) to (3L,3atm), $P(atm) = V(L)$, or moreso $V = \alpha P$.</p>
+    <p>\begin{eqnarray*}
+        W &=& - \int_{V_1}^{V_2} P dV \\
+        &=& - \int_{V_1}^{V_2} \alpha dV \\
+        &=& - \alpha \left[ \frac{V^2}{2} \right]_{V_1}^{V_2} \\
+        &=& - \left(\frac{101\,325 \,\mathrm{Pa}}{0.001 \; \mathrm{m}^3}\right) \left[ \frac{0.003^2}{2} - \frac{0.001^2}{2}\right] \\
+        &=& -405\,\mathrm{J}
+        \end{eqnarray*}</p>
+    <p>(c) As we know before, we can use equipartition with $U = \frac{1}{2}fPV$. Energy is a state function, so lets just subtract:</p>
+    <p>\begin{eqnarray*}
+        \Delta U &=& \frac{f}{2} \left( (3 \cdot 101\;325 \;\mathrm{Pa})\cdot(0.003\;\mathrm{m}^3) - (101\;325 \;\mathrm{Pa})\cdot(0.001\;\mathrm{m}^3)\right) \\
+        \Delta U &=& 1216 \;\mathrm{J}
+        \end{eqnarray*}</p>
+    <p>(d) Well, we know that $\Delta U = Q + W$, and we've found out $\Delta U$ and $W$, so the heat must be $Q = \Delta U - W = (1216 + 405)\;\mathrm{J} = 1621\;\mathrm{J}$.</p>
+    <p>(e) Throw the black box that is our system into the sun. I guarantee it'll provide enough heat to increase the pressure.</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.15(a)</strong> A gas at 250K and 15atm has a molar volume 12% smaller than that calculated from the perfect gas law. Calculate (a) the compression factor under these conditions and (b) the molar volume of the gas. Which are dominating in the sample, the attractive or the repulsive forces?</h5>
+    </div>
+    <p>Well just off the bat, as the volume has shrunk from the IDL, obviously the attractive forces are dominating.</p>
+    <p>Now, the compression factor is deinfed as $Z = \frac{V_m}{V_0} = \frac{1-0.12}{1} = 88\%$.</p>
+    <p>To calculate the molar volume we will just use the IDL.</p>
+    <p>\begin{eqnarray*}
+        PV_0 &=& nRT \\
+        P \frac{V_m}{Z} &=& nRT \\
+        V_m &=& \frac{nRTZ}{P} \\
+        V_m &=& \frac{(1 \; \mathrm{mol})\cdot (8.315\;\mathrm{J/mol/K}) \cdot (250 \;\mathrm{K}) \cdot 0.88}{15 \cdot 101\;325 \;\mathrm{atm}} \\
+        V_m &=& 1.2 \;\mathrm{L}
+        \end{eqnarray*}</p>
+</div>
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>S1.27)</strong> QQQ</h5>
+</div>
+<p>AAAAAAAAAAAA</p>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
     m_f &=& V \rho - m_p \\
     &=& \frac{4}{3}\pi r^3 \rho - m_p \\
     &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
     &=& 1550 \,\mathrm{kg}
-    \end{eqnarray*}</p>-->
+    \end{eqnarray*}</p>
+    -->
 
 <!--\[ \frac{-b\pm\sqrt{b^2-4ac}}{2a} \]-->

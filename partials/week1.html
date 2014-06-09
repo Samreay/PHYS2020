@@ -1,0 +1,63 @@
+<h2>Tutorial Content</h2>
+<hr />
+<!--
+<div class="question">
+    <h5 class="question"><strong>Snum)</strong> Question</h5>
+    <p>Answer</p>
+</div>
+-->
+<div class="question">
+    <h5 class="question"><strong>S1.11)</strong> Rooms A and B are the same size, and are connected by an open door.
+        Room A, however, is warmer (perhaps because its windows face the sun). Which room contains the greater
+        mass of air? Exaplain carefully!</h5>
+    <p>The two rooms are in mechanical equilibrium. From the ideal gas law, we have that $PV = nRT$. So, if $T$ increases, and $P$ and $V$ are constant, we must have $n$ decrease. Thus, a rise in $T$ corresponds to a fall in $n$, which means the air is less dense in room B.</p>
+</div>
+<div class="question">
+    <h5 class="question"><strong>S1.15)</strong> Estimate the average temperature of the air inside a hot-air balloon. Assume that the total mass of the unfilled balloon and the payload is 500kg. What is the mass of air inside the balloon.</h5>
+    <p>Okay, well to do this question, we need to make up a balloon size. I am going to go with a spherical balloon of radius $r = 7.5$m. I am also going to take the density of the atmosphere to be 1.16 kg/m$^3$ (from Wiki). From this, we can figure out the mass of air in the balloon, just using buoyancy. If we want to find the final mass $m_f$, and we have the volume of the balloon $V$, density of air $\rho$, and mass of payload $m_p$, we can find:</p>
+    <p>\begin{eqnarray*}
+        m_f &=& V \rho - m_p \\
+        &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+        &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+        &=& 1550 \,\mathrm{kg}
+        \end{eqnarray*}</p>
+
+    <p>Now, if we actually want to find the temperature, we can use the ideal gas law, rearrange for T, and then sub in the number of moles to give us the desired weight. If we assume all air is made of N2 (28 grams per mole), this becomes a lot simpler.</p>
+    <p>\begin{eqnarray*}
+        T &=& \frac{PV}{nR} \\
+          &=& \frac{(101\,325 \,\mathrm{Pa})\cdot(\frac{4}{3}\pi (7.5\,\mathrm{m})^3)}{\frac{1000}{28}(\frac{4}{3}\pi (7.5\,\mathrm{m})^3\cdot1.16 \,\mathrm{kg/m}^3 - 500\,\mathrm{kg})\cdot(8.315 \,\mathrm{J/mol/K})} \\
+          &=& 389 \,\mathrm{K} \\
+          &=& 116 ^\circ \mathrm{C}
+    \end{eqnarray*}</p>
+</div>
+
+<h2>Problem Set Required Questions</h2>
+<hr />
+
+
+
+<div class="question">
+    <h5 class="question"><strong>S1.9)</strong> What is the volume of one mole of air, at room temperature and at 1atm of pressure?</h5>
+    <p>Right, so obviously ideal gas law again. Assume its valid, all that jazz.</p>
+    <p>\begin{eqnarray*}
+       PV &=& nRT \\
+        V &=& \frac{nRT}{P} \\
+        &=& \frac{(1\,\mathrm{mol})\cdot(8.315\,\mathrm{J/mol/K})\cdot(300\,\mathrm{K})}{101\,325 \,\mathrm{Pa}} \\
+        &=& 24\,\mathrm{L}
+       \end{eqnarray*}</p>
+</div>
+
+<div class="question">
+    <h5 class="question"><strong>Problem 1.7)</strong> (a) Estimate the size of the internal radius of a mercury thermometer, (b) what would a lake freezing over look like if the coefficient of expansion of water was always positive.</h5>
+    <p>So for part A, lets define a spherical bulb at the bottom of radius $r_0 = 2.5mm$. Let's also say we want a difference of 10cm over a hundred degrees; $h = 0.1$m. We can use the thermal expansion coefficient given to us to solve it right now:</p>
+    <p>\begin{eqnarray*}
+        \beta &=& \frac{\Delta V/V}{\Delta T} \\
+        \Delta V &=& \beta V \Delta T \\
+        \pi r_1^2 h &=& \beta \frac{4}{3}\pi r_0^3 \Delta T \\
+        r_1 &=& \sqrt{\frac{4 r_0^3 \beta \Delta T}{3 h}} \\
+        r_1 &=& \sqrt{\frac{4 (0.0025\,\mathrm{m})^3 \cdot (1.81\times 10^{-4} \,\mathrm{K}^{-1})\cdot (100 \, \mathrm{K})}{3 \cdot (0.1 \,\mathrm{m})}} \\
+        &=& 61.4 \,\mu\mathrm{m}
+        \end{eqnarray*}</p>
+    <p>As for part b and the positive thermal expansion coefficient, it means the lake would freeze bottom up, instead of top down. Also, because there would be continual circulation, the first bit of ice would occur far closer to when the whole lack was about to freeze, so freezing would happen far more rapidly.</p>
+</div>
+

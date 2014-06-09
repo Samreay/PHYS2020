@@ -33,10 +33,10 @@ function MainController($scope, $timeout) {
         $scope.active = v;
         $timeout(function() {
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-        }, 500, false);
+        }, 200, false);
     }
 
     $timeout(function() {
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }, 500, false);
+    }, 200, false);
 }

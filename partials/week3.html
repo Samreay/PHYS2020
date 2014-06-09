@@ -2,9 +2,113 @@
 <hr />
 <div class="question">
     <div class="q">
-        <h5><strong>S1.27)</strong> QQQ</h5>
+        <h5><strong>A2.3)</strong> Explain the difference between the change in internal energy and the change in enthalpy accompanying a chemical or physical process.</h5>
     </div>
-    <p>AAAAAAAAAAAA</p>
+    <p>Well, the change in enthalpy also has to account for any environmental work done. If we hold $P$ and $V$ constant, there will not be any difference between the internal energy and the enthalpy.</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>A2.4)</strong> Explain the significance of a physical observable being a state function and compile a list of as many state functions as you can identify.</h5>
+    </div>
+    <p>I hate "as many" questions. They never end. Anyway, a state function means that the value being looked at is conservative. It is path independent. Which means you can simply look at the start and end points and you have all the required information about the system. For example, we could say that the internal energy $U$ is a state function. Also $H$, $G$, $F$, $V$, $T$, $P$, $E$ and $S$.</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.47)</strong> Your 200g cup of tea is boiling hot. About how much ice should you add to bring it down to a comfortable sipping temperature of $65^\circ\mathrm{C}$? Assume the ice is initially at $-15^\circ\mathrm{C}$. The enthalpy of fusion is 6.01 kJ/mol, enthalpy of vaporization is 40.68 kJ/mol, the specific heat of ice is 2.085 J/g/K and the specific heat of water is 4.184 J/g/K.</h5>
+    </div>
+    <p>Right, so lets just figure out how much energy we need to get the ice to absorb.</p>
+    <p>\begin{eqnarray*}
+        Q &=& m C_W \Delta T \\
+        &=& (200\;\mathrm{g}) \cdot (4.184 \;\mathrm{J/g/K}) \cdot ((100 - 65) \;\mathrm{K}) \\
+        &=& 29.3 \;\mathrm{kJ}
+        \end{eqnarray*}</p>
+    <p>Right, so that is the amount of energy we should use to get however much ice we throw in up to $65^\circ\mathrm{C}$. We can write down the energy per gram to go from $-15^\circ\mathrm{C}$ to $60^\circ\mathrm{C}$.</p>
+    <p>Firstly though, we should realise that $L_f = 6.01 \;\mathrm{kJ/mol} = 333 \;\mathrm{J/g}$ given that water has a molar mass of 18 grams.</p>
+    <p>\begin{eqnarray*}
+        E &=& m C_I \Delta T_1 + m L_f + m C_W \Delta T_2 \\
+        &=& m(15 C_I + L_f + 65 C_W) \\
+        m &=& \frac{E}{15 C_I + L_f + 65 C_W} \\
+        &=& \frac{29\;288 \;\mathrm{J}}{15\cdot (2.084 \;\mathrm{J/g/mol}) + (333 \;\mathrm{J/g}) + 65\cdot (4.184 \;\mathrm{J/g/K}) } \\
+        &=& 46 \;\mathrm{g}
+        \end{eqnarray*}</p>
+</div>
+
+
+
+<h2>Problem Set Required Questions</h2>
+<hr />
+
+<div class="question">
+    <div class="q">
+        <h5><strong>A1.51)</strong> Use the data at the back of Schroeder to determine $\Delta H$ for the combustion of one mole of glucose, $C_6 H_{12} O_6 + 6 O_2\rightarrow 6 CO_2 + 6 H_2 O$.</h5>
+    </div>
+    <p>Right, so Schroeder tells us that</p>
+    <p>\begin{eqnarray*}
+        \Delta_f (C_6 H_{12} O_6) &=& - 1273 \;\mathrm{kJ/mol} \\
+        \Delta_f (O_2) &=& 0 \;\mathrm{kJ/mol} \\
+        \Delta_f (CO_2) &=& - 393.51\;\mathrm{kJ/mol} \\
+        \Delta_f (H_2 O) &=& - 285.83\;\mathrm{kJ/mol} \\
+        \end{eqnarray*}</p>
+    <p>Subtracting these values gets us</p>
+    <p>\begin{eqnarray*}
+        \Delta H &=& (\Delta_f (C_6 H_{12} O_6) + 6 \Delta_f (O_2)) - (6 \Delta_f(CO_2) + 6 \Delta_f(H_2)) \\
+        &=& (- 1273 + 6\cdot 393.51 + 6\cdot 285.83) \;\mathrm{kJ/mol} \\
+        &=& 2803 \;\mathrm{kJ/mol}
+        \end{eqnarray*}</p>
+    <p>That's a fair amount of energy released.</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>S1.54)</strong> A 60kg hiker wishes to climb Mt Kosciuszko for some unknown reasons, which is 919m up.</h5>
+        <h5>Assuming 25% efficiency from food to mechanical energy, how many Weetbix (2 biscuits = 486kJ) are needed for the vertical ascent?</h5>
+        <h5>the other 75% is converted into heat. If no heat was dissipated, how much would her body temperature rise?</h5>
+        <h5>If we instead keep body temp constant and evaporate water instead (8% higher $L_v$ at 25 degrees than at boiling point). How much water should she drink to make up lost fluid?</h5>
+    </div>
+    <p>(a) Cool. So just quadruple the work against gravity for the food energy. One biscuit is worth $E_b = 243$ kJ.</p>
+    <p>\begin{eqnarray*}
+        n &=& \frac{E}{E_b} \\
+        &=& \frac{4 m g h}{E_b} \\
+        &=& \frac{4 \cdot (60 \;\mathrm{kg})\cdot(9.81\;\mathrm{m/s/s})\cdot(919\;\mathrm{m})}{243\;\mathrm{kJ}} \\
+        &=& 8.9 \;\mathrm{biscuits of doom}
+        \end{eqnarray*}</p>
+    <p>(b) So, let's pretend the hiker is 100% water, which has $C_W = 4200$ J/kg/K.</p>
+    <p>\begin{eqnarray*}
+        E &=& m C_W \Delta T \\
+        \Delta T &=& \frac{E}{m C_w} \\
+        &=& \frac{3 g h}{C_w} \\
+        &=& \frac{3\cdot(9.81\;\mathrm{m/s/s})\cdot(919\;\mathrm{m})}{4200\;\mathrm{J/kg/K}} \\
+        &=& 6.4 \;\mathrm{K}
+        \end{eqnarray*}</p>
+    <p>That's probably going to be uncomfortable.</p>
+    <p>(c) Right, so how much to sweat it out. Latent heat of vaporisation is $2.57$ MJ/kg at boiling point. We just need to add eight percent, and find the right amount of mass to counteract all that nasty energy.</p>
+    <p>\begin{eqnarray*}
+        E &=& m L_v \\
+        m &=& \frac{E}{L_v} \\
+        &=& \frac{3 m g h}{L_v} \\
+        &=& \frac{3 \cdot (60 \;\mathrm{kg})\cdot(9.81\;\mathrm{m/s/s})\cdot(919\;\mathrm{m})}{1.08 \cdot 2570\;\mathrm{kJ}} \\
+        &=& 0.58 \;\mathrm{kg} \\
+        &\approx& 600 \;\mathrm{mL}
+        \end{eqnarray*}</p>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>A2.2)</strong> In a process known as calcination, 1 mol of calcium carbonate $CaCO_3(s)$ is heated to 800 degrees, when it decomposes into quick-lime and carbon dioxide gas ($CaCO_3 \rightarrow CaO(s) + CO_2(g)$). Suppose the heating is carried out in a container fitted with a piston which is initially resting on the solid. Calculate the work done during decomposition at 1atm. What would be done if instead of having a piston the container was open to the atmosphere?</h5>
+    </div>
+    <p>So firstly, no one cares whether or not a piston is there. If the piston was fixed, maybe we would, but the fact it can move means its just for show. Any easy simplification of this question is to realise everything happens at 1atm. All work, expansion, treat it as 1atm. We can then find the initial and final volumes (hint the former is zero because we assume as solid has approximately no volume), and use that the find the work. And given $P$ is static, no integral for us!</p>
+    <p>\begin{eqnarray*}
+        W &=& P \Delta V \\
+        &=& P (V_f - V_i) \\
+        &=& P V_f \\
+        &=& P \frac{nRT}{P} \\
+        &=& nRT \\
+        &=& (1\;\mathrm{mol})\cdot(8.315\;\mathrm{J/mol/K})\cdot((800+273)\;\mathrm{K}) \\
+        &=& 8.92 \;\mathrm{kJ}
+        \end{eqnarray*}</p>
 </div>
 
 

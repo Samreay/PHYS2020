@@ -31,7 +31,6 @@ function MainController($scope, $timeout, paths) {
         return v == window.location.hash.substring(1);
     };
     $scope.setActive = function(v) {
-        $scope.active = v;
         $timeout(function() {
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
         }, 500, false);

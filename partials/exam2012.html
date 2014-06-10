@@ -1,0 +1,47 @@
+<h2>Part A</h2>
+<hr />
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 1:</strong></h5>
+        <h5>
+            <ol type="a">
+                <li>Give a statement of the second law of thermodynamics that applies to an isolated system. What is the condition for equilibrium in such as system?</li>
+                <li>Consider an isolated system that consists of two subsystems of fixed particle number and volume that can exchange energy as heat. Derive a condition for equilibrium in terms of the entropy and internal energy of the subsystems. Describe how this condition relates to temperature.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Entropy can not decrease. At all. In any way. No matter what. Not even if you say please.</p>
+            <p>Equilibrium therefore has to be at maximal entropy: $dS = 0$.</p>
+        </li>
+        <li>
+            <p>In terms of energy, all we need to do is conserve it: $\Delta U_A = - \Delta U_B$.</p>
+            <p>In terms of entropy, when need to maximise it (holding $V$ and $N$ constant). Note that the second step is just the chain rule, and that $dU_A = - dU_B$ (shown above)</p>
+            <p>\begin{eqnarray*}
+                dS = dS_A + dS_B &=& 0 \\
+                \left(\frac{\partial S_A}{\partial U_A}\right)_{V,N} d U_A + \left(\frac{\partial S_B}{\partial U_B}\right)_{V,N} d U_B &=& 0 \\
+                \left(\frac{\partial S_A}{\partial U_A}\right)_{V,N} d U_A &=& \left(\frac{\partial S_B}{\partial U_B}\right)_{V,N} d U_A \\
+                \left(\frac{\partial S_A}{\partial U_A}\right)_{V,N} &=& \left(\frac{\partial S_B}{\partial U_B}\right)_{V,N}
+                \end{eqnarray*}</p>
+            <p>We can see how this relates to temperature when as temperature is defined as the "thing" which is the same when the objects are in thermal equilibrium (condition for such is directly above). Currently, the the units for the slopes above are (J/K)/J = 1/K, so let us propose to define temperature as $\frac{1}{T} = \left(\frac{dS}{dU}\right)_{V,N}$.</p>
+        </li>
+    </ol>
+</div>
+
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>S1.27)</strong> QQQ</h5>
+</div>
+<p>AAAAAAAAAAAA</p>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

@@ -29,10 +29,42 @@
     </ol>
 </div>
 
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 2:</strong> A meteorite with mass 1000kg, consisting largely of an iron-nickel alloy called Kamacite, enters the Earth's atmosphere at a very large velocity. The work the meteorite does against the frictional forces of the atmosphere is converted into heat, which causes the surface of the meteorite to increase in temperature and vaporize. A meteorite of this size will burn up entirely in the upper atmosphere (about 80km above Earth's surface), where the average temperature is -85 degrees.</h5>
+        <h5><o type="a">
+            <li>By calculating the energy lost by the meteorite in this processed (called 'abalation') determine a minimum bound for its initial velocity. Assume the average temperature of vaporisation to be 2500 K.</li>
+            <li>Assuming that all the energy of the 1000kg meteorite goes into the upper mesosphere, calculate the change in entropy of the mesosphere.</li>
+        </o></h5>
+    </div>
+    <p>The thermodynamic data is in the original exam btw. You can either open it up, or look at the math below and see what I sub in.</p>
+    <o type="a">
+        <li>
+            <p>Right, so let's just use standard KE, turn it into heat, and that should be it. We'll have to assume it starts as a solid at -85 degrees.</p>
+            <p>\begin{eqnarray*}
+                KE &=& Q \\
+                \frac{1}{2} m v^2 &=& m(\Delta T_1 c_P(s) + \Delta T_2 c_P(l) + \Delta_f h + \Delta_v h) \\
+                v &=& \sqrt{2 (\Delta T_1 c_P(s) + \Delta T_2 c_P(l) + \Delta_f h + \Delta_v h)} \\
+                v &=& \sqrt{2 \left((1592 \;\mathrm{K}) \cdot (690 \;\mathrm{J/kg/K}) + (2500 - 1780 \;\mathrm{K})\cdot (670\;\mathrm{J/kg/K}) + (2.7\times10^5 \;\mathrm{J/kg}) + (6.42\times10^6 \;\mathrm{J/kg})\right)} \\
+                v &=& 4067 \;\mathrm{m/s}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So we will treat the mesosphere as a reservoir. Instead of going through that awful heat equation then, I'll just use the KE, as I know they are equal. This way I can just use <code>ans</code> on my calculator as well, so why on earth would I do anything different?</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \frac{Q}{T} \\
+                &=& \frac{mv^2}{2T} \\
+                &=& \frac{(1000\;\mathrm{kg})\cdot(4067\;\mathrm{m/s})^2}{2\cdot (273-85)} \\
+                &=& 44 \;\mathrm{MJ/K}
+                \end{eqnarray*}</p>
+        </li>
+    </o>
+</div>
 <!--
 <div class="question">
 <div class="q">
-<h5><strong>S1.27)</strong> QQQ</h5>
+<h5><strong>Question 2:</strong> QQQ</h5>
 </div>
 <p>AAAAAAAAAAAA</p>
 </div>

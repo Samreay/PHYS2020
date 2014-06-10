@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="phys2020" ng-controller="MainController">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PHYS2020 Student Solutions</title>
+    <title>PHYS2020 {{getActive()}}</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <script src="js/jquery-2.1.0.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script></head>
-<body ng-app="phys2020" ng-controller="MainController">
+<body>
     <ng-include src="'partials/navigation.html'"></ng-include>
     <div class="content">
         <div class="container">

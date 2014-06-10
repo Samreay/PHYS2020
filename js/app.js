@@ -4,6 +4,7 @@ app.constant('paths', [
     {path: '/week1', label: 'Week 1', partial: 'partials/week1.html'},
     {path: '/week2', label: 'Week 2', partial: 'partials/week2.html'},
     {path: '/week3', label: 'Week 3', partial: 'partials/week3.html'},
+    {path: '/week4', label: 'Week 4', partial: 'partials/week4.html'},
     {path: '/exam2013', label: 'Exam 2013', partial: 'partials/exam2013.html'}
 ]);
 app.config(function($routeProvider, paths) {
@@ -27,13 +28,21 @@ function MainController($scope, $timeout, paths) {
     });
     $scope.isActive = function(v) {
         return v == window.location.hash.substring(1);
-    }
+    };
     $scope.setActive = function(v) {
         $scope.active = v;
         $timeout(function() {
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
         }, 500, false);
-    }
+    };
+    $scope.getActive = function() {
+        for (var i = 0; i < paths.length; i++) {
+            if ($scope.isActive(paths[i].path)) {
+                return paths[i].label;
+            }
+        }
+        return "Contents";
+    };
 
     $timeout(function() {
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);

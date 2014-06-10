@@ -1,0 +1,99 @@
+<h2>Tutorial Content</h2>
+<hr />
+<div class="question">
+    <div class="q">
+        <h5><strong>Problem 3.3:</strong> Figure 3.3 shows graphs of entropy vs energy for two objects, $A$ and $B$. Both graphs are on the same scale. The energies of these two objects initially have the values indicated; the objects are then brought into thermal contact with each other. Explain what happens subsequently and why, without using the word "temperature".</h5>
+        <img class="wide" src="images/fig33.png">
+    </div>
+    <p>So we can see that at the starting energies indiciated, the graph on the right has a steeper gradient. So a bit of energy for A will increase entropy a lot, whilst losing a bit of energy from B will decrease entropy only a bit. To maximise entropy, we would therefore expect energy to flow from B to A. So B must be hotter. Another way of realising this is that $T = \frac{\partial U}{\partial S}$, so the flatter the graph is, the higher the temperature.</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Clausius says:</strong> "No process is possible whose sole result is the transfer of heat from a colder to a hotter body".</h5>
+        <h5><strong>Kelvin says:</strong> "No process is possible whose sole result is the complete conversion of heat into work".</h5>
+        <h5><strong>Simon says:</strong> "Touch the ground!"</h5>
+        <h5>
+            <ol type="a">
+                <li>Draw diagrams showing the flow of heat and work between hot and cold reservoirs each of these impossible scenarios.</li>
+                <li>Explain how these two statements each follow from the second law, which says the entropy of the universe cannot decrease.</li>
+                <li>Couple the "impossible process" in each case to a Carnot cycle to show that the statements of Clausius and Kelvin are equivalent.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>I hate these drawing questions. C and K denote Clausius and Kelvin.</p>
+            <img class="wide" src="images/flow.png">
+        </li>
+        <li>
+            <p>Given we are saying the reservoirs have constant temperature, we can say that $\Delta S = \frac{Q}{T}$</p>
+            <p>For Clausius:</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \Delta S_c + \Delta S_H \\
+                &=& -\frac{Q}{T_C} + \frac{Q}{T_H} \\
+                &=& < 0
+                \end{eqnarray*}</p>
+            <p>As $T_H > T_C$. For Kelvin:</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \Delta S_c + \Delta S_H \\
+                &=& 0 - \frac{Q}{T_H} \\
+                &=& < 0
+                \end{eqnarray*}</p>
+            <p>Obviously if $Q$ is negative then the total entropy is only decreasing.</p>
+        </li>
+        <li>So if we are looking at a Carnot cycle, we know the efficiency is $\frac{T_H - T_C}{T_H}$. Now, if for Clausius, if we have $Q_H = Q_C$ then obviously work is zero. And if we have a Carnot cycle with no work, there is no heat flowing, or $T_H = T_C$. For Kelvin, we have 100% efficiency. Which implies an infinite temperature of the hot reservoir, and as that means no heat into the cold reservoir, we also have a non-functioning Carnot cycle.</li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Problem 4.14:</strong> A heat pump is an electric device that heats a building by pumping heat in from the cold outside. In other words, it's the same as a refrigerator, but its purpose is to warm the hot reservoir rather than to cool the cold reservoir (even though it does both). Let us define the following standard symbols, all taken to be positive by convention:</h5>
+        <h5>\begin{eqnarray*}
+            T_h &=& \text{temperature inside building} \\
+            T_c &=& \text{temperature outside} \\
+            Q_h &=& \text{heat pumped in in one day} \\
+            Q_c &=& \text{heat taken from outdoors in one day} \\
+            W &=& \text{electrical energy used by heat pump in one day} \\
+            \end{eqnarray*}</h5>
+        <h5><ol type="a">
+            <li>Explain wy the COP for a heat pump should be defined as $Q_h/W$.</li>
+            <li>What relation amoung $Q_h, \;Q_c$ and $W$ is implied by energy conservation alone? Will energy conservation permit the COP to be greater than one?</li>
+            <li>Use the second law of thermodynamics to dervie an upper limit on the COP, in terms of the temperatures $T_h$ and $T_c$ alone.</li>
+            <li>Explain why a heat pump is better than an electric furnace, which simply converts electrical work directly in heat.</li>
+        </ol></h5>
+    </div>
+    <ol type="a">
+        <li><p>Benefit over cost. Benefit is $Q_h$. Cost is $W$. Simple as that.</p></li>
+        <li><p>They sum to give a constant. Ie $Q_c + W = Q_h$. We can therefore sub out $Q_h$ in the COP to give COP $= \frac{Q_h}{Q_h - Q_c} = \frac{1}{1 - Q_c/Q_h}$.</p></li>
+        <li>
+            <p>Right, so lets not make entropy negative. So, given we have entropy of the cold decreasing and the entropy of the hot reservoir increasing:</p>
+            <p>\begin{eqnarray*}
+                \Delta S_h \ge \Delta S_c \\
+                \frac{Q_h}{T_h} \ge \frac{Q_c}{T_c} \\
+                \frac{Q_h}{Q_c} \ge \frac{T_h}{T_c} \\
+                \frac{Q_c}{Q_h} \le \frac{T_c}{T_h} \\
+                \end{eqnarray*}</p>
+            <p>Now, as $Q_c/Q_h \le \frac{T_c}{T_h}$,  COP $\le \frac{1}{1 - T_c/T_h}$</p>
+        </li>
+        <li>Because that would have a maximum efficiency of 1, where $W = Q_h$. That's not that impressive, given it corresponds to the worst possible COP as above. Heat pumps get better the closer the temperatures are, so why not actually use that? If its 20 degrees and you want to get 25 degrees, that's a maximal COP of 60. Sure beats 1.</li>
+    </ol>
+</div>
+
+
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>S1.27)</strong> QQQ</h5>
+</div>
+<p>AAAAAAAAAAAA</p>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

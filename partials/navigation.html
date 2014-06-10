@@ -13,7 +13,7 @@
     <div class="clearfix"></div>
     <div class="collapse navbar-collapse" style="margin-top: 20px;">
         <ul class="nav nav-stacked" id="menu-bar">
-            <li ng-repeat="item in menu" style="cursor: pointer;" ng-class="{activeMenu: isActive(item.label)}" ng-click="setActive(item.label)"><a href="#">{{item.label}}</a></li>
+            <li ng-repeat="item in menu" style="cursor: pointer;" ng-class="{activeMenu: isActive(item.path)}" ng-click="setActive(item.path)"><a href="#{{item.path}}">{{item.label}}</a></li>
         </ul>
     </div>
 </div>

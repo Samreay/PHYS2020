@@ -17,13 +17,14 @@
     <ng-include src="'partials/navigation.html'"></ng-include>
     <div class="content">
         <div class="container">
-            <ng-include src="getActive()"></ng-include>
+            <ng-view></ng-view>
             <div style="height:100px"></div>
         </div>
     </div>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
     <script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
     <script src="js/app.js"></script>
 </body>

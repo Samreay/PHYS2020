@@ -1,0 +1,236 @@
+<h2>Part A</h2>
+<hr />
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 1:</strong> Consider a system consisting of one ole of monatomic ideal gas undergoing the following cycle:</h5>
+        <h5><ol type="i"><li>isochoric heating</li><li>adiabatic expansion</li><li>isochoric cooling</li><li>adiabatic compression back to its original state</li></ol></h5>
+        <h5><ol type="a"><li>Sketch a PV diagram for this process. Indicate for each step whether the heat and work done is positive, negative or zero.</li>
+        <li>b) Along which segments is new entropy created? What type of engine is this likely to be?</li></ol></h5>
+    </div>
+    <p>a) So, here is the diagram. Draw mental arrows clockwise if it helps around the shape.</p>
+    <img src="images/Otto.png">
+    <p>As to the stages...</p>
+    <ol type="i">
+        <li>As no volume change, no work is being done. But as PV is increasing, temperature must be increasing ($PV = nRT$), so Q must be flowing into the system.</li>
+        <li>As volume changes, and increases, negative work is done ($W = -PV$). As it is adiabatic, $Q=0$.</li>
+        <li>No volume, no work. Decreasing in $PV$, so negative $Q$.</li>
+        <li>Work is done, volume decreasing, so positive work is done. $Q=0$, just like in ii).</li>
+    </ol>
+    <p>b) So entropy is created when we add heat to the system, or expand it to a greater volume. Thus entropy is created in steps i) and ii).</p>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 2:</strong></h5>
+        <h5>
+            <ol type="a">
+                <li>Derive an expression for the internal pressure $\pi_T$ of a van der Waals gas in terms of its $a$ and $b$ coefficients.</li>
+                <li>Explain the pysical significance of this result. In your answer, contrast the van der Waals behaviour with that of an ideal gas</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Right, so just jumping onto the formula sheet now, where it gives us the van der Walls pressure and an equation with $\pi_T$.</p>
+            <p>\begin{eqnarray*}
+                \pi_T &=& T \left(\frac{\partial P}{\partial T}\right)_V - P \\
+                &=& \frac{nRT}{V-nb} - \frac{nRT}{V-nb} + a\left(\frac{n}{V}\right)^2 \\
+                &=& a \frac{n^2}{V^2}
+                \end{eqnarray*}</p>
+        </li>
+        <li>Physical significance is that a real gas always has internal pressure. The significance is that, unlike an ideal gas in which temperature can be used to find the total internal energy, a real gas will have energy stored internally in the gas pressure as well.</li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 3:</strong> Glaciers flow due to two main mechanisms: plastic flow and basal sliding. For sufficiently thick glaciers (greater than 50m), the large stresses on the ice cause it to deform and flow as a plastic. Glaciers in warmer areas can undergo basal sliding, whereby a layer of meltwater underneath the glacier allows it to slide with little friction over the bedrock.</h5>
+        <h5>
+            <ol type="a">
+                <li>Applying a large pressure to ice will cause the melting point of ice to decrease. What unusual feature of the phase diagram of water makes this possible?</li>
+                <li>Calculate the melting point of the ice at the bottom of a 50m thick glacier, to determine whether the weight of the ice above the meltwater has a significant effect on the temperature at which it can form.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>The unusual feautre is that the phase boundary between ice and water is a steep negative gradient, not a positive gradient. This means that the more pressure you apply to ice, the higher the melting point becomes.</p>
+            <img src="images/water.png">
+        </li>
+        <li>
+            <p>Okay, so first thing to note is that we are going to use the Clausius-Clapeyron relation, which requires $\Delta P$, $T$, $L$ and $\Delta v$, which is the change in specific volume. Now, the change in specific volume is in cubic metres per kilogram, so this is just the inverse change in density (kg/m$^3$) we are given in the question. Also note that the pressure is easily found if we consider a rectangular prism 1m on the side and 50m tall of ice: $P = F/A = V\rho g/A = g \rho h a^2 / a^2 = g\rho h$.</p>
+            <p>\begin{eqnarray*}
+                \frac{dP}{dT} &=& \frac{L}{T\Delta v} \\
+                \frac{dP}{dT} &=& \frac{L\Delta \rho}{T} \\
+                \Delta T &=& \frac{\Delta P T}{L\Delta \rho} \\
+                \Delta T &=& \frac{g \rho h T}{L\Delta \rho} \\
+                \Delta T &=& \frac{(9.81\;\mathrm{m/s}^2)\cdot(916.7\;\mathrm{kg/m}^3)\cdot (50\;\mathrm{m}) \cdot (273\;\mathrm{K})}{(334\;000 \;\mathrm{J/kg})\cdot ((916.7-1000)\;\mathrm{m}^3\mathrm{/kg})} \\
+                \Delta T &=& -4.4 \;\mathrm{K}
+                \end{eqnarray*}</p>
+            <p>That is a far larger change than I was expecting, so unless my math is wrong, that water would be melted if it was above -4.4 degrees Celsius.</p>
+        </li>
+    </ol>
+</div>
+
+<h2>Part B</h2>
+<hr />
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 4:</strong> Your body obtains energy from food through the combustion of organic compounds, producing water and carbon dioxide as waste products.</h5>
+        <h5>
+            <ol type="a">
+                <li>Calculate the energy available for work from the combustion of a 200g chocolate bar. For the purposes of this question, you may approximate the par as pure glucose.</li>
+                <li>How much energy would you obtain as heat through the combustion of the chocolate if no work was extract? Compare your answer with that obtained in (a) and explain any difference you find.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So maximum extractable work normally refers to Gibbs free energy. So I will take the $\Delta_f$(product) - $\Delta_f$(reactant). From the tables provided, we know </p>
+            <p>\begin{eqnarray*}
+                \Delta_f (C_6 H_{12} O_6) &=& - 910 \;\mathrm{kJ/mol} \\
+                \Delta_f (O_2) &=& 0 \;\mathrm{kJ/mol} \\
+                \Delta_f (CO_2) &=& -394.36\;\mathrm{kJ/mol} \\
+                \Delta_f (H_2 O) &=& -228.57\;\mathrm{kJ/mol} \\
+                \end{eqnarray*}</p>
+            <p>Subtracting these values would only give the amount per mol of substance. So instead let us realise that glucode has a molar mass of 180, so the number of moles in 200g of glucose is $200/180$ moles</p>
+            <p>\begin{eqnarray*}
+                \Delta G &=& \left( \frac{200}{180} \;\mathrm{mol} \right) \left[ 6\cdot(- 394.36 - 228.57) + 910 \right] \;\mathrm{kJ/mol} \\
+                &=& -3142 \;\mathrm{kJ}
+                \end{eqnarray*}</p>
+            <p>As the chemical process has a decreased Gibbs free energy, we can "harvest" the opposite amount of energy: $2828$ kJ.</p>
+        </li>
+        <li>
+            <p>Right, so if we don't extract work, but still want to look at changes in temperature, we should look at the enthalpy change, $\Delta H$. Getting the vlaues for enthalpy now...</p>
+            <p>\begin{eqnarray*}
+                \Delta_f (C_6 H_{12} O_6) &=& - 1273 \;\mathrm{kJ/mol} \\
+                \Delta_f (O_2) &=& 0 \;\mathrm{kJ/mol} \\
+                \Delta_f (CO_2) &=& - 393.51\;\mathrm{kJ/mol} \\
+                \Delta_f (H_2 O) &=& - 285.83\;\mathrm{kJ/mol} \\
+                \end{eqnarray*}</p>
+            <p>Subtracting gets</p>
+            <p>\begin{eqnarray*}
+                \Delta H &=& \left( \frac{200}{180} \;\mathrm{mol} \right) \left[ (6 \Delta_f(CO_2) + 6 \Delta_f(H_2)) - (\Delta_f (C_6 H_{12} O_6) + 6 \Delta_f (O_2)) \right] \\
+                &=& \left( \frac{200}{180} \;\mathrm{mol} \right)  \left[ (6\cdot -393.51 + 6\cdot -285.83) + 1273 \right] \;\mathrm{kJ/mol} \\
+                &=& -2821 \;\mathrm{kJ/mol}
+                \end{eqnarray*}</p>
+            <p>So we can see that if we didn't extract work, the heat energy is actually less than the possible heat energy. This must be accounted for in the extra term for Gibbs free energy: $-T\Delta S$, such that $\approx -320 = - T\Delta S$. This negative value (Gibbs being lower than enthalpy) is expected if the reaction increases entropy (and I have just shown $\Delta S$ must be positive), as it means we can extract extra work via heat.</p>
+        </li>
+    </ol>
+</div>
+
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 5:</strong> Liquid Nitrogen Bomb</h5>
+        <h5>On a 27 degree Celsius day, a student places 56g of liquid nitrogen into a 600ml soft drink bottle, replaces the cap, and runs away like a little girl. You ma assume that only $N_2$ is present in the bottle, it's heat capacity is constant between 77K and 400K, and that the bottles volume does not change.</h5>
+        <h5>
+            <ol type="a">
+                <li>Referring to the plot overleaf of the vapour pressure of $N_2$ as a function of temperature, explain what the student would see as the temperature of the nitrogen passes $T=126$K.</li>
+                <li>What is the maximum theoretical pressure that the bottle would need to withstand to prevent it from exploding at room temperature?</li>
+                <li>How much heat would be transferred to the liquid nitrogen to bring it to room temperature?</li>
+                <li>Now assume the bottle can only withstand a total pressure of 17atm. At what temperature would it explode and level the city?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So 126K is the critical point, surprise! So what would someone see? Well, probably the liquid disappearing and become more and more gaseous. However, at the critical point, both liquid and gas phases can coexist peacefully, so we might get a lot of variation in density in the bottle, giving multiple scattering, and making it appear more opaque than usual.</p>
+        </li>
+        <li>
+            <p>Right, maximal pressure would occur when everything is gaseous. So I'll use the IDL. Note that the molar mass of nitrogen is 28 g/mol.</p>
+            <p>\begin{eqnarray*}
+                PV &=& nRT \\
+                P &=& \frac{nRT}{V} \\
+                &=& \frac{(\frac{56}{28} \;\mathrm{mol}) \cdot (8.315 \;\mathrm{J/mol/K})\cdot(273+27 \;\mathrm{K})}{\frac{0.6}{1000} \;\mathrm{m}^3}
+                &=& 8315 \;\mathrm{kPa} \\
+                &=& 82 \;\mathrm{atm}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So, assuming it goes in at the boiling point in necessary for us to do this calculation. Using equipartition theory to get the heat capacity: $C_v = \frac{1}{2}fnR$.</p>
+            <p>\begin{eqnarray*}
+                Q &=& n\Delta H_{\mathrm{vap}} + C_v \Delta T \\
+                Q &=& n\left(\Delta H_{\mathrm{vap}} + \frac{1}{2} fR \Delta T \right) \\
+                &=& \left(\frac{56}{28}\;\mathrm{mol}\right) \left( 5560 \;\mathrm{J/mol} + \frac{1}{2}\cdot 5\cdot (8.315 \;\mathrm{J/mol/K}) + (273+27-77 \;\mathrm{K}) \right) \\
+                &=& 20.4 \;\mathrm{kJ}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Okay, I am going to use the IDL because I really don't know how to combine vapour pressure and the rate of cooling of the bottle. It seems like something which would not be fun to do. But, what I can do is figure out what temperature that would correspond to and see if it is above the critical point, because they I don't have to worry about distinct phases.</p>
+            <p>\begin{eqnarray*}
+                T &=& \frac{PV}{nR} \\
+                &=& \frac{(17\cdot 101325 \;\mathrm{Pa})\cdot(\frac{0.6}{1000} \;\mathrm{m}^3)}{(\frac{56}{28} \; \mathrm{mol})\cdot(8.315 \;\mathrm{J/mol/K})}
+                &=& 62\;\mathrm{K}
+                \end{eqnarray*}</p>
+            <p>Right - that is colder than what it started with, which means bad luck, no IDL for Sam. But that's alright, because I'll just reluctantly read off the provided graph. At a pressure of 17 bar on the transition line, we get a corresponding temperature of approximately <strong>113K</strong>. So lock that one in Eddie.</p>
+        </li>
+    </ol>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong> Thermodynamics of a rubber band</h5>
+        <h5>Suppose you suspend a mass from the end of a rubber band and heat the rubber. An interesting feature is that, under these conditions (constant tension), it will contract as it is heated, such that $$\left(\frac{\partial L}{\partial T}\right)_f < 0,$$, where $f$ is the tension in the rubber and $L$ is its length.</h5>
+        <h5>
+            <ol type="a">
+                <li>When you stretch a rubber band by applying a tension force, what kind of work are you doing on it? Write down the first law for this system as an expression for $dU$, ignoring any changes in volume.</li>
+                <li>Derive the thermodynamic identity for the free energy $F = U - TS$ and hence prove the maxwell relation $$\left(\frac{\partial S}{\partial L}\right)_T = - \left(\frac{\partial f}{\partial T}\right)_L.$$</li>
+                <li>Using this Maxwell relation and the fact that rubber contracts as it is heated under constant tension, show that the entropy of the rubber will decrease as it is stretched slowly (isothermally). Note that Young's modulus is positive - increasing the tension at constant temperature will increase the length.</li>
+                <li>Give an explanation of this result from a microscopic point of view. In your answer explain why this is different to an ideal gas, whose entropy will increase with expansion.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>You are doing mechanical work stretching the rubber band. If we look at energy from entropy and temperature, and tension and stretch, we get $dU = f dL + T dS$.</p>
+        </li>
+        <li>
+            <p>So we can just write out the derivative term and sub out $dU$.</p>
+            <p>\begin{eqnarray*}
+               F &=& U - TS \\
+               dF &=& dU - TdS - SdT \\
+                &=& f dL + T dS - T dS - S dT \\
+                &=& f dL - S dT
+                \end{eqnarray*}</p>
+            <p>Now, as $F$ is a state function, we can apply the symmetry of second differentials. We can also see that $f = \frac{\partial F}{\partial L}_T$ and $S = - \frac{\partial F}{\partial T}_L$.</p>
+            <p>\begin{eqnarray*}
+                \frac{\partial}{\partial T} \left( \frac{ \partial F}{\partial L} \right)_T &=& \frac{\partial}{\partial L} \left( \frac{ \partial F}{\partial T} \right)_L\\
+                \frac{\partial}{\partial T} f &=& \frac{\partial}{\partial L} (-S)\\
+                \frac{\partial f}{\partial T} &=& -\frac{\partial S}{\partial L}\\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so we just use that maxwell relation and put $\partial L$ on the other side to get $\Delta S = - \Delta L \left(\frac{\partial f}{\partial L}\right)_L$. In this scenario, if we are stretching the rubber, $\Delta L > 0$, and (due to Young's modulus being positive), $\left(\frac{\partial f}{\partial L}\right)_L > 0$. Which means that $\Delta S < 0$, so entropy is decreasing.</p>
+        </li>
+        <li>There is only one way to fully straighten a kinked molecule. But there are innumerable ways to scrunch it back up. Thus the scrunched up state has far higher entropy. A gas on the other hand, always has more possible microstates with more space to play with.</li>
+    </ol>
+</div>
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>S1.27)</strong> QQQ</h5>
+</div>
+<p>AAAAAAAAAAAA</p>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

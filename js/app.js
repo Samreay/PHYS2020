@@ -16,7 +16,8 @@ function MainController($scope, $timeout) {
         {label: 'Contents', partial: 'partials/contents.html'},
         {label: 'Week 1', partial: 'partials/week1.html'},
         {label: 'Week 2', partial: 'partials/week2.html'},
-        {label: 'Week 3', partial: 'partials/week3.html'}
+        {label: 'Week 3', partial: 'partials/week3.html'},
+        {label: 'Exam 2013', partial: 'partials/exam2013.html'}
     ];
     $scope.getActive = function() {
         for (var i = 0; i < $scope.menu.length; i++) {

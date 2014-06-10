@@ -72,7 +72,65 @@
             </ol>
         </h5>
     </div>
-    <p>DOOOOOM</p>
+    <ol type="a">
+        <li>
+            <p>Right, so let's start with the identity, then play around a bit yeah. Also, screw chemical potential, throw it out the window! Btw, the Maxwell relation is going to be $\left(\frac{\partial P}{\partial T}\right)_V = \left(\frac{\partial S}{\partial V}\right)_V$.</p>
+            <p>\begin{eqnarray*}
+                dU &=& T dS - P dV \\
+                \left(\frac{\partial U}{\partial V}\right)_T &=& T \left(\frac{\partial S}{\partial V}\right)_V - P \\
+                &=& T \left(\frac{\partial P}{\partial T}\right)_V - P
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>For a van der Waals gas we have that $P = \frac{nRT}{V-nb} - a \frac{n^2}{V^2}$</p>
+            <p>\begin{eqnarray*}
+                \pi_T &=& T\left(\frac{\partial P}{\partial T}\right)_V - P \\
+                &=& T \frac{nR}{V-nb} - \left(\frac{nRT}{V-nb} - a \frac{n^2}{V^2}\right) \\
+                &=& a \frac{n^2}{V^2}
+                \end{eqnarray*}</p>
+            <p>This differs from an ideal gas in that temperature is not the the only determination of total internal energy. The intermolecular forces in a van der Waals gas adds potential energy to the system, that will increase as the system expands.</p>
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5>
+            <strong>Question 4:</strong> Consider a system consisting of one mole of diatomic ideal gas undergoing a Stirling cycle. The Stirling cycle is similar to a Carnot cycle, but with isochores instead of adiabats. ie the four segments are
+            <ol>
+                <li>isothermal expansion at temperature $T_h$.</li>
+                <li>ischoric cooling at volume $V_{\text{max}}$.</li>
+                <li>isothermal contraction at temperature $T_c$.</li>
+                <li>ischoric heating at volume $V_{\text{min}}$</li>
+            </ol>
+            <ol type="a">
+                <li>Sketch a qualitatively accurate PV diagram for this process. On the diagram, or in a table, indicate whether the heat and work during each of the four segments is positive, negative or zero.</li>
+                <li>Assume that the cycle is operating between only two reservoirs, at temperatures $T_h$ and $T_c$ respectively. Along which segments is new entropy created? Explain why this entropy creation makes this Stirling cycle less efficient than a Carnot cycle operating between the same two reservoirs.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Right, so the diagram looks like that conveniently photoshopped up below.</p>
+            <img src="images/2012pv.png">
+            <ol>
+                <li>As P is positive, V is positive, Work is negative. To keep same temp, we need same internal energy, which means positive Q.</li>
+                <li>As no volume change, no work is done. But as pressure drops, temperature must drop, so Q is negative.</li>
+                <li>Negative volume, so positive work, and negative Q (opposite to step 1).</li>
+                <li>No volume change, so no work. Pressure increase, so Q is positive.</li>
+            </ol>
+        </li>
+        <li>
+            <p>Right, so dealing with entropy now</p>
+            <ol>
+                <li>No entropy. The entropy lost by the hot reservoir is the same as the entropy gained by the system, as they are at the same temperature. <strong>However, I differ from the official answer in thinking that the increasing volume creates entropy via </strong> $\Delta S = N k \ln \frac{V_f}{V_i}$</li>
+                <li>Entropy going into cold reservoir is greater than the entropy leaving the object. INCREASE IN ENTROPY.</li>
+                <li>Again, heat flowing at same temperature, so no new entropy from heat. But I would have thought that the work in decreasing volume would decrease entropy.</li>
+                <li>Heat flow at different temperature, increase in entropy.</li>
+            </ol>
+            <p>Anyway, this entropy makes everything less efficient as you cannot extract useful work out of it - you must dump some energy to the cold reservoir to get rid of the entropy.</p>
+        </li>
+    </ol>
 </div>
 <!--
 <div class="question">

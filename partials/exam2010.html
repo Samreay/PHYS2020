@@ -1,0 +1,59 @@
+<h2>Part A</h2>
+<hr />
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 1:</strong></h5>
+        <h5>
+            <ol type="a">
+                <li>Give a clear and precise statement of the zeroth law of thermodynamics. Explain how the concept of thermal equilibrium leads to the concept of thermometry.</li>
+                <li>Give a clear and precise statement of the first law of thermodynamics. Give a definition of heat and explain under what conditions (if any) the energy transferred as heat in an infinitesimal change can be identified with $TdS$. Is it meaningful to use the term 'heat of a substance'?</li>
+                <li>Give a clear and precise statement of the second law of thermodynamics. Use it to show that the Gibbs energy of a system will decrease during a spontaneous change at constant pressure and temperature.</li>
+                <li>Give a clear and precise statement of the third law of thermodynamics. What does this law imply about the thermal expansion coefficient $\alpha$ of a substance as $T \rightarrow 0$?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li><p>Thermal equilibrium is transitive. Gives rise to thermometry as you can measure temperature of one object by bringing another object into thermal contact until you have thermal equilibrium, and figuring out that objects temperature (maybe its a thermometer...)</p></li>
+        <li><p>Energy is conserved. In thermodynamic quantities: $\Delta U = Q + W$. You can identify $TdS$ with $Q$ so long as $W = -P dV$, ie when we are talking about reversible processes. I suppose it could be meaningful to ask about the heat of a substance, if you are looking to try and extract energy from it via thermal contact with some other object.</p></li>
+        <li>
+            <p>Entropy increases. More formally, $\Delta S \ge 0$. Now, if we look at Gibbs free energy, we know that $G = U + PV - TS$. We can find $dG$ now, keeping temperature and pressure constant. Note that $dU = dQ - PdV$.</p>
+            <p>\begin{eqnarray*}
+                G &=& U + PV - TS \\
+                dG &=& dU + PdV + VdP - TdS - SdT \\
+                &=& Q - PdV + PdV + VdP - TdS - SdT \\
+                &=& Q + VdP - TdS - SdT \\
+                &=& Q - T dS
+                \end{eqnarray*}</p>
+            <p>Now, we know that $dS \ge \frac{Q}{T}$, so $T dS \ge Q$ and thus $dG \le 0$.</p>
+        </li>
+        <li>
+            <p>The third law effectively states that at absolute zero, entropy is zero. Now, I haven't really used a thermal expansion coefficient before, so had to look up Joel's solutions. Effectively, at $T=0$, $S=0$, so at $T=0$, $\left(\frac{\partial S}{\partial P}\right)_T = 0$. Via a Maxwell relation, this tell us that $\left(\frac{\partial V}{\partial T}\right)_T = 0$. So, the change in volume as temperature changes is zero, which means either the volume itself is zero, or the thermal expansion coefficient (which describes how the volume changes with proportion to temperature) is zero.</p>
+        </li>
+    </ol>
+</div>
+
+
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>Question 2:</strong> QQQ
+    <ol type="a">
+        <li></li>
+    </ol>
+</h5>
+</div>
+    <ol type="a">
+        <li>
+            <p></p>
+        </li>
+    </ol>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

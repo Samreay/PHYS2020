@@ -7,7 +7,8 @@ app.constant('paths', [
     {path: '/week4', label: 'Week 4', partial: 'partials/week4.html'},
     {path: '/exam2013', label: 'Exam 2013', partial: 'partials/exam2013.html'},
     {path: '/exam2012', label: 'Exam 2012', partial: 'partials/exam2012.html'},
-    {path: '/exam2011', label: 'Exam 2011', partial: 'partials/exam2011.html'}
+    {path: '/exam2011', label: 'Exam 2011', partial: 'partials/exam2011.html'},
+    {path: '/exam2010', label: 'Exam 2010', partial: 'partials/exam2010.html'}
 ]);
 app.config(function($routeProvider, paths) {
     console.log(paths);

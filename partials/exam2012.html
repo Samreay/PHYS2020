@@ -123,12 +123,175 @@
         <li>
             <p>Right, so dealing with entropy now</p>
             <ol>
-                <li>No entropy. The entropy lost by the hot reservoir is the same as the entropy gained by the system, as they are at the same temperature. <strong>However, I differ from the official answer in thinking that the increasing volume creates entropy via </strong> $\Delta S = N k \ln \frac{V_f}{V_i}$</li>
+                <li>No entropy. The entropy lost by the hot reservoir is the same as the entropy gained by the system, as they are at the same temperature.</li>
                 <li>Entropy going into cold reservoir is greater than the entropy leaving the object. INCREASE IN ENTROPY.</li>
-                <li>Again, heat flowing at same temperature, so no new entropy from heat. But I would have thought that the work in decreasing volume would decrease entropy.</li>
+                <li>Again, heat flowing at same temperature, so no new entropy from heat.</li>
                 <li>Heat flow at different temperature, increase in entropy.</li>
             </ol>
             <p>Anyway, this entropy makes everything less efficient as you cannot extract useful work out of it - you must dump some energy to the cold reservoir to get rid of the entropy.</p>
+        </li>
+    </ol>
+</div>
+
+
+
+<h2>Part B</h2>
+<hr />
+
+<div class="question">
+    <div class="q">
+        <h5>
+            <strong>Question 5:</strong> Consider a fuel cell that uses methane ("natural gas") as fuel. The chemical reaction is $CH_4 + 2O_2 \rightarrow 2H_2O + CO_2$
+            <ol type="a">
+                <li>Use the attached table of thermodynamic data to calculate the enthalpy change and change in Gibbs free energy for this reaction at room temperature and pressure.</li>
+                <li>Assuming ideal performance of the fuel cell, how much electrical work can one get out of the fuel cell for each mole of methane fuel?</li>
+                <li>Assume that 8 electrons are transferred at each electrode of the fuel cell. What is the maximum voltage of the fuel cell?</li>
+                <li>Calculate the entropy change associated with the chemical reaction.</li>
+                <li>Is your answer from (d) negative? Is your answer consistent with the second law of thermodynamics?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Right, so we'll just subtract values.</p>
+            <p>\begin{eqnarray*}
+                \Delta_g CH_4 &=& -50.72 \;\mathrm{kJ/mol} \\
+                \Delta_g O_2 &=& 0 \;\mathrm{kJ/mol} \\
+                \Delta_g H_2O &=& -228.57 \;\mathrm{kJ/mol} \\
+                \Delta_g CO_2 &=& -394.36 \;\mathrm{kJ/mol} \\
+                \end{eqnarray*}</p>
+            <p>\begin{eqnarray*}
+                \Delta G &=& \left(  -394.36 - 2\cdot228.57 + 50.72 \right) \;\mathrm{kJ/mol} \\
+                &=& -800.78 \;\mathrm{kJ/mol}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Given that the Gibbs free energy change for the reaction decreases by 800 kJ per mol, we can thus harness that 800 kJ per mole and turn it into electric work (as we are assuming ideal performance).</p>
+        </li>
+        <li>
+            <p>This question is weird. If we introduce 8 electrons into every reaction, and assume that all energy output goes into those electrons, we can find the energy per electron simply by finding the energy released by a mole of reactant, and dividing this by 8 times Avogadro's number to figure out the number of electrons. Then we need to convert J to eV to find the voltage.</p>
+            <p>\begin{eqnarray*}
+                E &=& \frac{\Delta G}{N_e} \\
+                &=& \frac{800 780 \;\mathrm{J}}{8\cdot 6.022\times10^{23}} \;\text{J/electron} \\
+                &=& \frac{800 780 \;\mathrm{J}}{(8\cdot 6.022\times10^{23} \;\text{electrons})\cdot (1.6\times10^{-19} \;\mathrm{J})} \;\text{V} \\
+                &=& 1.04 \;\mathrm{V}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so now to just do the same as part (a) but with entropy.</p>
+            <p>\begin{eqnarray*}
+                \Delta_s CH_4 &=& 186.26 \;\mathrm{J/K/mol} \\
+                \Delta_s O_2 &=& 204.14 \;\mathrm{J/K/mol} \\
+                \Delta_s H_2O &=& 188.83 \;\mathrm{J/K/mol} \\
+                \Delta_s CO_2 &=& 213.74 \;\mathrm{J/K/mol} \\
+                \end{eqnarray*}</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \left(  213.74 + 2\cdot188.83 - 186.26 - 2\cdot 204.14 \right) \;\mathrm{J/K/mol} \\
+                &=& -3.14 \;\mathrm{J/K/mol}
+                \end{eqnarray*}</p>
+            <p>So this means entropy decreases in this reaction.</p>
+        </li>
+        <li>
+            <p>Yes, it is negative. So the local entropy of the reaction decreases, but given that the reaction gives off a massive amount of heat, the entropy of the universe still increases.</p>
+        </li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong> This question considers the thermodynamicso f the normal fluid-superfluid phase transition in liquid $^4He$. The order parameter for this phase transition can be denoted by a complex number $\Psi$, which is related to the quantum mechanical wave function of the helium atoms.
+            <ol type="a">
+                <li>What are some of the properties of a superfluid that distinguish it from a normal fluid?</li>
+                <li>The Ginzburg-Landau form of the Gibbs free energy can be written in the form $$G(T,P,\Psi) = G_n(T,P) + a(T-T_\lambda)\Psi\cdot\Psi^* + b (\Psi\cdot\Psi^*)2$$, where $G_n(T,P)$ denotes the Gibbs free energy of the normal fluid state, $a$ and $b$ are positive constants that are independent of temperature, and $\Psi^*$ denotes the complex conjufate to $\Psi$. Sketch the free energy as a function of the amplitude of $\Psi$ (ie $|\Psi| \equiv \sqrt{\Psi\cdot\Psi^*}$), for temperatures both greater and less than $T_\lambda$.</li>
+                <li>Use this Ginzburn-Landau free energy to dervie an expression for the temperature dependence of the order parameter. Evaluate the critical exponent $\beta$, deinfe by $$\left|\Psi(T)\right| ~ (T_\lambda - T)^\beta\;\;\;\;\; T\rightarrow T_\lambda^-$$</li>
+                <li>Evaluate and plot the temperature dependence of the heat capacity $C_P(T)$.</li>
+                <li>Compare you answer in (d) to the experimental data below. What is the physical origin of the difference?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>This does not look like a fun question. But as to the properties, one is that there is no viscosity. At all.</p>
+        </li>
+        <li>
+            <p>So, the image on the right is with $T>T_\lambda$. The plot on the right is with $T< T_\lambda$.</p>
+            <img class="wide" src="images/gl.png">
+        </li>
+        <li>
+            <p>So again, another question that you spend more time trying to understand what on Earth the question is asking than actually doing the question. After talking to Joel, he said to disregard the rest of this question, as it isn't going to be in the 2014 course.</p>
+        </li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 7:</strong> For this question make use of the attached table of thermodynamic data.
+            <ol type="a">
+                <li>Use the table of data to determine whether crystals of calcite or of aragonite are the thermodynamically stable form of calcium carbonate ($CaCO_3$) at room temperature and ambient pressure.</li>
+                <li>On the same graph sketch the Gibbs free energy (at room temperature) of aragonite and calcite as a function of pressure. You may assume that the moral volumes do not vary significantly with pressure.</li>
+                <li>Use your graph to estimate the pressure at room temperature at which the relative stability of aragonite and calcite changes.</li>
+                <li>At room temperature estimate the slope $\frac{dP}{dT}$ of the phase boundary between aragonite and calcite. Why should the slope of the phase boundary be zero near near absolute zero temperature?</li>
+                <li>Summarise your results in a sketch of the aragonite-calcite phase diagram as a function of pressure and temperature.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So from Schroeder we have</p>
+            <table border="1" style="width:500px; margin: auto; margin-bottom: 20px;">
+                <tr>
+                    <td>Name</td>
+                    <td>$\Delta_H$ (kJ)</td>
+                    <td>$\Delta_G$ (kJ)</td>
+                    <td>$S$ (J/K)</td>
+                    <td>$V$ (cm$^3$)</td>
+                </tr>
+                <tr>
+                    <td>Calcite</td>
+                    <td>-1206.9</td>
+                    <td>-1128.8</td>
+                    <td>92.9</td>
+                    <td>36.93</td>
+                </tr>
+                <tr>
+                    <td>Aragonite</td>
+                    <td>-1207.1</td>
+                    <td>-1127.8</td>
+                    <td>88.7</td>
+                    <td>34.15</td>
+                </tr>
+            </table>
+            <p>The thermodynamically stable form is the one with the lowest Gibbs free energy, which means at room temperature and pressure this is calcite.</p>
+        </li>
+        <li>
+            <p>So, if we are looking at the Gibbs free energy as a function of pressure, we should look to the thermodynamic identity where only pressure can change: $dG = V dP \rightarrow \frac{dG}{dP} = V$. What this means is that from the starting point at 1atm, we simply plot two lines with gradients dependent on the volume of the substances.</p>
+            <img src="images/ac.png">
+        </li>
+        <li>
+            <p>Well let's see. There is 1kJ of difference between them at room temperature. The difference in their volumes is about 2.8 cm$^3$ (per mole of course). Knowing $dG = P dV$, $P = \frac{\Delta G}{\Delta V} = \frac{1000}{2.78\times10^{-6} \;\mathrm{m}^3} = 3550 \;\mathrm{atm}$.
+        </li>
+        <li>
+            <p>Phase boundary occurs when $\Delta G = 0$, such that $G_1 = G_2$. Given that we can write $G$ in terms of $G_0 + dG$, we can say that</p>
+            <p>\begin{eqnarray*}
+                G_1 &=& G_2 \\
+                G_{01} + dG_1 &=& G_{02} + dG_2 \\
+                G_{01} + V_1 dP - S_1 dT &=& G_{02} +  V_2 dP - S_2 dT \\
+                (V_1 - V_2) dP &=& (G_{02}-G_{01}) + (S_1 - S_2) dT \\
+                 \frac{dP}{dT} &=& \frac{(G_{02}-G_{01})}{(V_1 - V_2)dT} + \frac{(S_1 - S_2)}{(V_1 - V_2)} \\
+                \end{eqnarray*}</p>
+            <p>Assuming the $\frac{(G_{02}-G_{01})}{(V_1 - V_2)dT}$ is not signficiant, this reduces the gradient to </p>
+            <p>\begin{eqnarray*}
+                \frac{dP}{dT} &=& \frac{(S_1 - S_2)}{(V_1 - V_2)} \\
+                &=& \frac{(92.9 - 88.7) \;\mathrm{J/K}}{(36.93 - 34.15) \;\mathrm{m}^3} \\
+                &=& 1.51 \;\mathrm{J/K/cm}^3
+                \end{eqnarray*}</p>
+            <p>This would be zero near absolute zero as the change in entropy between the two phases would be converging to zero as well. We don't see that in the above slope because we assume constant entropy change per kelvin, which doesn't hold near absolute zero.</p>
+        </li>
+        <li>
+            <p>We can plot this as a graph. The slope is given by the previously found value. The pressure of the phase at room temperature is given in (c). From that, we just draw away. I haven't added quantitative values on the plot.</p>
+            <img src="images/ac2.png">
         </li>
     </ol>
 </div>

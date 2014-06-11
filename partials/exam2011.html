@@ -144,6 +144,107 @@
         </li>
     </ol>
 </div>
+
+
+
+
+<h2>Part B</h2>
+<hr />
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 5:</strong> In lectures a video was shown of a large steel barrel being crushed by air pressure. First, a small amount of liquid water was poured into the barrel. This water was then heated until it was boiling and steam started to escape from the barrel. The barrel was then sealed and a large quantity of ice was placed on top of the barrel. The ice cooled the contents of the barrel. A few minutes later the barrel collapsed spontaneously. Assume that when the barrel was sealed, it contained pure saturated water vapour (no air) at 1 bar. The volume of the barrel is 0.21 cubic meters.
+            <ol type="a">
+                <li>On a clearly labeled T-V phase diagram, which includes the liquid-vapour envelope, sketch the processes describing the changes in the state of the water (liquid and vapour) inside the barrel.</li>
+                <li>Assume that the temperature inside the barrel was 40 degrees when it was crushed. Use the attached tables to estimate the pressure inside the barrel when it was crushed by the air pressure.</li>
+                <li>Consider a similar barrel which contains just air and is unsealed and has a diameter of 1 metre. Estimate how much weight must be placed on top of the barrel to crush it.</li>
+                <li>Use the tables to estimate the mass of the steam inside the barrel when it is sealed. Does your answer seam reasonable?</li>
+                <li>From the changes in the specific entropy and in the volume associated with the liquid-vapour transition at atmospheric pressure, estimate how much much the vapour pressure vaires with temperature.</li>
+            </ol>
+        </h5>
+    </div>
+    <p>Right, that was a long question to type out.</p>
+    <ol type="a">
+        <li>
+            <p>So if draw a P-T diagram, we should note i) the starting point, ii) when the water started to boil, iii) just as the water all boiled, iv) just before barrel is crushed to Davy Jones' locker.</p>
+            <img src="images/pt.png">
+        </li>
+        <li>
+            <p>40 degrees corresponds to a pressure of 0.0738 bar. Given it started at 1 bar, it thus takes 0.9262 bar of pressure to crush the barrel.</p>
+        </li>
+        <li>
+            <p>So we need a pressure of 0.9262 bar over an area of 1m diameter.</p>
+            <p>\begin{eqnarray*}
+                F &=& PA \\
+                &=& (0.9262 \times 10^5 \;\mathrm{N/m}^2)\cdot(\pi 0.5^2 \;\mathrm{m}^2) \\
+                &=& 73.75 \;\mathrm{kN} \\
+                &=& 7518 \;\mathrm{kg}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So we need to use the specific volume of steam for this question. From the table, we know that for steam at 100 degrees, we have $v_g = 1.673 \;\mathrm{m}^3/\mathrm{kg}$</p>
+            <p>\begin{eqnarray*}
+                m_g &=& \frac{V}{v_g} \\
+                &=& \frac{0.21\;\mathrm{m}^3}{1.673 \;\mathrm{m}^3/\mathrm{kg}} \\
+                &=& 125.5\;\mathrm{g}
+                \end{eqnarray*}</p>
+            <p>Yeah that seems pretty reasonable. Its hot and gaseous, if I got 5kg I would be wondering how on earth I managed to vapourise lead.</p>
+        </li>
+        <li>
+            <p>This question is worded horrifically. What I got from it was entropy and phase transition, which means almost certainly to use the Clausius-Clapeyron relation: $\frac{dP}{dT} = \frac{\Delta S}{\Delta V}$. So what we want is to find $\frac{dP}{dT}$ by using points on the table to server as a linear approximation.</p>
+            <p>\begin{eqnarray*}
+                m_f &=& V \rho - m_p \\
+                &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+                &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+                &=& 1550 \,\mathrm{kg}
+                \end{eqnarray*}</p>
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong> This question considers the thermodynamics of the metal-superconductor phase transition. The order parameter for this phase transition can be denoted by a complex number $\Psi$, which is related to the quantum mechanical wave function of the pairs of electrons that form in the superconducting phase. In the absence of a magnetic field the Ginzburg-Landau form of the Gibbs free energy can be written in the form $$G(T,P,\Psi) = G_n(T,P) + a(T-T_\lambda)\Psi\cdot\Psi^* + b(\Psi\cdot\Psi^*)^2,$$ where $G_n(T,P)$ denotes the Gibbs free energy of the normal metalic state, $a$ and $b$ are positive constants that are independent of temperature and $\Psi^*$ denotes the complex conjugate to $\Psi$.
+            <ol type="a">
+                <li>Sketched the free energy as a function of $\Psi$.</li>
+                <li>Use this Ginzburg-Landau free energy to derive an expression for the temperature dependence of the order parameter. Evaluate the critical exponent $\beta$ defnied by $$ \left| \Psi(T) \right| \sim (T_c - T)^\beta  \;\;\;\;\;\; T \rightarrow T_c^-$$</li>
+                <li>Evaluate the condensation energy of the superconducting slate: how much lower its Gibbs free energy is than the normal metallic state. Plot this as a function of temperate.</li>
+                <li>The most fundamental property of superconductors is that they expel magnetic flux. This means that in an external magnetic field $H$ there is an energy cost per unit volume of $H^2/2\mu_0$ where $\mu_0 = 4\pi \times 10^{-7} \;\mathrm{N/A}^2$. Use this fact together with your answer to (c) to evaluate H_c(T), the upper critical field above which superconductivity is destroyed at a temperature $T$.</li>
+                <li>Sketch the phase diagram of a type I superconductor as a function of temperature and external magnetic field $H$. Denote the critical point on the phase diagram.</li>
+            </ol>
+        </h5>
+    </div>
+    <p>Joel has stated in the Facebook group that the superconductor section of the past exams will not be on our exams. I recommend this question is skipped.</p>
+    <ol type="a">
+        <li>
+            <p>Only doing this part. The others, I am not sure how to do. The two plots represent $T>T_\lambda$ and $T< T_\lambda$ respectively.</p>
+            <img class="wide" src="images/gl.png">
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 7:</strong> The figure below shows the pressure-temperature phase diagram of the protein Ribonuclease A at a pH of 2.0. There are two phases, the native state and the denatured state, where the protein unfolds and loses its function.
+            <img src="images/2011q7.png">
+            <ol type="a">
+                <li>Write down the relationship between the equilibrium constant K for the reaction and the Gibbs free energy change of denaturation, $\Delta G$.</li>
+                <li>Find an expression for $f$ the fraction of protein that is denatured: $$f = \frac{\text{[Denatured]}}{\text{[Denatured]}+\text{[Native]}}$$ in terms of the temperature and $\Delta G$.</li>
+                <li>Assuming that the change in enthalpy and in entropy associated with the denaturation do not vary with temperature, sketch the temperature dependence of $f$.</li>
+                <li>Show that the variation of $K$ with pressure is related to the volume change by $$\frac{\partial \ln K}{\partial P} = - \frac{\Delta V}{RT}$$</li>
+                <li>Write down the Clausius-Clapeyron equation which describes the slope of the phase boundary. What can you conclude about the volume and entropy change at different temperatures and pressure?</li>
+            </ol>
+        </h5>
+    </div>
+    <p>I don't like this question.</p>
+    <ol type="a">
+        <li>
+            <p></p>
+        </li>
+    </ol>
+</div>
+
 <!--
 <div class="question">
 <div class="q">

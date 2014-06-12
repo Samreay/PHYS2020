@@ -240,7 +240,50 @@
     <p>I don't like this question.</p>
     <ol type="a">
         <li>
-            <p></p>
+            <p>Right, so just copying down that equation for free marks: $K \equiv \exp\left(\frac{-\Delta G^\circ}{RT}\right)$</p>
+        </li>
+        <li>
+            <p>This requires us to realise that $K$ - the equilibrium constant - is simply the ratio (at equilibrium) of the the amount in the final state over the amount in the original: $$K = \frac{[\text{Denatured}]}{[\text{Native}]}$$</p>
+            <p>We can thus just rearrange $f$ to be something in terms of $K$:</p>
+            <p>\begin{eqnarray*}
+                f &=& \frac{\text{[Denatured]}}{\text{[Denatured]}+\text{[Native]}} \\
+                &=& \frac{\frac{[\text{Denatured}]}{[\text{Native}]}}{\frac{[\text{Denatured}]}{[\text{Native}]}+1} \\
+                &=& \frac{K}{K+1}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so the question asks us to find $\frac{df}{dT}$. To do this, we should first work out $\frac{dK}{dT}$. And to do that, we should work out $\frac{d}{dT}\left(\frac{\Delta G^\circ}{RT}\right)$. And to do that, we should first figure out $\frac{d}{dT}\Delta G^\circ$. Eugh. Note in the maths below, I cancel out the enthalpy term and take the entropy term outside due to them not varying with $T$, as stated in the question.</p>
+            <p>\begin{eqnarray*}
+                \frac{d}{dT} \Delta G &=& \frac{d}{dT} \left(\Delta H - \Delta S \Delta T \right) \\
+                \frac{d}{dT} \Delta G &=& \frac{d\Delta H}{dT} - \frac{d\Delta S \Delta T}{dT}  \\
+                \frac{d}{dT} \Delta G &=& 0 - \Delta S \frac{d \Delta T}{dT}  \\
+                \frac{d}{dT} \Delta G &=& - \Delta S  \\
+                \end{eqnarray*}</p>
+<!--            <p>To find $\frac{d}{dT}\left(\frac{\Delta G^\circ}{RT}\right)$:</p>
+            <p>\begin{eqnarray*}
+                \frac{d}{dT}\left(\frac{\Delta G^\circ}{RT}\right) &=& \frac{1}{R} \frac{T \Delta G'^\circ - T' \Delta G^\circ}{T^2} \\
+                \frac{d}{dT}\left(\frac{\Delta G^\circ}{RT}\right) &=&  \frac{-T \Delta S - \Delta G^\circ}{RT^2} \\
+                \end{eqnarray*}</p>
+            <p>Finally, as $K$ is just an exponential term of the negation of the expression, we know that</p>
+            <p>\begin{eqnarray*}
+                \frac{d}{dT} K &=& \frac{d}{dT} \exp\left(\frac{-\Delta G^\circ}{RT}\right) \\
+                &=&  \frac{T \Delta S + \Delta G^\circ}{RT^2} \exp\left(\frac{-\Delta G^\circ}{RT}\right)
+                \end{eqnarray*}</p>-->
+            <p>So this means as $T$ increases, $\Delta G$ decreases and $RT$ increases. Thus, as $T$ grows larger, $\frac{\Delta G}{RT}$ becomes smaller. As  $K \equiv \exp\left(\frac{-\Delta G^\circ}{RT}\right)$, we can see that $K$ approaches $\exp(0) = 1$. So $f \rightarrow \frac{1}{2}$ as $T\rightarrow \infty$. So what we are probably looking at is exponential decay to a value of 0.5 from 1.</p>
+        </li>
+        <li>
+            <p>Right, so let's just work from the definition of $K$.</p>
+            <p>\begin{eqnarray*}
+                K &=& \exp\left(\frac{-\Delta G^\circ}{RT}\right) \\
+                \ln K &=& \frac{-\Delta G^\circ}{RT} \\
+                \frac{\partial}{\partial P} \ln K &=& \frac{\partial}{\partial P}  \frac{-\Delta G^\circ}{RT} \\
+                &=& \frac{-1}{RT} \frac{\partial \Delta G^\circ}{\partial P} \\
+                &=& \frac{-1}{RT} \frac{ \left(\partial \Delta U + \partial \Delta P \Delta V - \partial \Delta S \Delta T \right)}{\partial P} \\
+                &=& \frac{-\Delta V}{RT}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So, the Clausius-Clapeyron relation gives $\frac{dP}{dT} = \frac{\Delta S}{\Delta V}$. At around $10^\circ\text{C}$, we can see that $\frac{dP}{dT} \approx 0$, so that means that at that turning point, we would have to have no entropy change. We can see that around this point the gradient changes sign, indicative that either the volume continues growing and we have minimum in entropy, or that the entropy continues to increase, but at that point the volume change reverses (like ice I suppose). Another thing to note is that around $50^\circ\text{C}$ we have a steep negative slope, which very likely means that $\Delta V \rightarrow 0$.</p>
         </li>
     </ol>
 </div>

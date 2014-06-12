@@ -32,7 +32,256 @@
     </ol>
 </div>
 
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 2:</strong>
+            <ol type="a">
+                <li>Starting from the definition of enthalpy in terms of internal energy, derive the following general relationship between the heat capacities at constant pressure and volume: $$C_p - C_V = \alpha V(\pi_T + p),$$ where $\alpha$ is the expansion coeffficient and $\pi_T$ is the internal pressure, defined in the formula sheet. Hint: consider internal energy to be a function of volume and temperature.</li>
+                <li>Consider the following chemical reaction that converts ethanol into acetic acid: $$C_2 H_5 OH(l) + O_2(g) \rightarrow CH_3 COOH(l) + H_2 O(l).$$ Using the attached tables of thermodynamic data, determine the change in enthalpy, entropy and Gibbs free energy for the reaction at 298K.</li>
+                <li>For a certain process, the change in Gibbs free energy is expressed by the relation $$\Delta G - (13580 + 16.1 T \ln T - 72.59T)\;\mathrm{J},$$ where $T$ is the absolute temperature. Calculate $\Delta S$ and $\Delta H$ for this process at $T = 298.15\;\mathrm{K}$.</li>
+                <li>For the processes in (b) and (c) describe whether it leaders to a more ordered state, is endothermic or exothermic and spontaneous.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So, start with the definition of enthalpy, and we will work forwards.</p>
+            <p>\begin{eqnarray*}
+                H &=& U + PV \\
+                dH &=& dU + PdV + VdP \\
+                dH &=& \pi_T dV + C_V dT + P dV + V dP \\
+                \left(\frac{dH}{dT}\right)_P &=& \left(\pi_T \frac{dV}{dT} + C_V \frac{dT}{dT} + P \frac{dV}{dT} + V \frac{dP}{dT}\right)_P \\
+                C_p &=& C_V + \left(\frac{dV}{dT}\right)(\pi_T + P) \\
+                C_p - C_V &=& \left( \frac{1}{V} \frac{dV}{dT} \right) V (\pi_T + P)\\
+                C_p - C_V &=& \alpha V (\pi_T + P)\\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>The data values from Schroeder are:</p>
+            <table class="table table-striped table-bordered table-hover table-condensed" border="1" style="width:500px; margin: auto; margin-bottom: 20px;">
+                <tr>
+                    <th>Name</th>
+                    <th>$\Delta_H$ (kJ)</th>
+                    <th>$\Delta_G$ (kJ)</th>
+                    <th>$S$ (J/K)</th>
+                </tr>
+                <tr>
+                    <td>Ethanol</td>
+                    <td>-277.69</td>
+                    <td>-174.78</td>
+                    <td>269.91</td>
+                </tr>
+                <tr>
+                    <td>Oxygen</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>205.14</td>
+                </tr>
+                <tr>
+                    <td>Acetic acid</td>
+                    <td>-484.5</td>
+                    <td>-389.9</td>
+                    <td>159.8</td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td>-285.83</td>
+                    <td>-237.13</td>
+                    <td>188.83</td>
+                </tr>
+            </table>
+            <p>Subtracting the enthalpy of the reaction gives:</p>
+            <p>\begin{eqnarray*}
+                \Delta H&=& \left( -484.5 -285.83 + 277.69 + 0 \right) \;\mathrm{kJ/mol} \\
+                \Delta H &=& -492.64 \;\mathrm{kJ/mol}
+                \end{eqnarray*}</p>
+            <p>For Gibbs free energy:</p>
+            <p>\begin{eqnarray*}
+                \Delta G &=& \left( -389.9 -237.13 + 174.78 + 0 \right) \;\mathrm{kJ/mol} \\
+                \Delta G &=& -452.25 \;\mathrm{kJ/mol}
+                \end{eqnarray*}</p>
+            <p>For the entropy change:</p>
+            <p>\begin{eqnarray*}
+                \Delta G &=& \left( 159.8 + 188.83 - 269.91 - 205.14 \right) \;\mathrm{J/K/mol} \\
+                \Delta G &=& -126.42 \;\mathrm{J/K/mol}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>We know that $G = H - TS$, so $\frac{dG}{dT} = -S$ provided we assume that $H$ is not a function of $T$ (it is for an ideal gas, but we must assume temperature dependence is negligible for this question).</p>
+            <p>\begin{eqnarray*}
+                G &=& H - TS \\
+                \frac{dG}{dT} &=& - S \\
+                -S &=& \frac{d}{dT} \left(13580 + 16.1 T \ln T - 72.59 T \right) \;\mathrm{J} \\
+                -S &=& 16.1 \ln T + 16.1 \frac{T}{T} - 72.59 \;\mathrm{J/K} \\
+                S &=& 72.59 - 16.1 (1 + \ln T) \;\mathrm{J/K} \\
+                S &=& 72.59 - 16.1 (1 + (\ln 298.15\;\mathrm{K})) \;\mathrm{J/K} \\
+                S &=& -35.24 \;\mathrm{J/K} \\
+                \end{eqnarray*}</p>
+            <p>Remeber, constant temperature, so $\Delta G = \Delta H + T \Delta S$. This then gives</p>
+            <p>\begin{eqnarray*}
+                \Delta H &=& \Delta G + T \Delta S \\
+                &=& (13580 + 16.1 T \ln T - 72.59T + T\Delta S \\
+                &=& (13580 + 16.1 (298.15\;\mathrm{K}) \ln (298.15\;\mathrm{K})  - 72.59\cdot(298.15\;\mathrm{K})  + (298.15\;\mathrm{K}) \cdot (-35.24 \;\mathrm{J/K}) \\
+                &=& 8780 \;\mathrm{J}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>For (b), we have a decrease in entropy (more ordered), which means (to not violate the second law), the reaction must be exothermic. As the Gibbs free energy decreases, it is also a spontaneous reaction.</p>
+            <p>For (c), we have a decrease in entropy again, so exothermic. However, the Gibbs free energy increases, so the reaction is not spontaneous.</p>
+        </li>
+    </ol>
+</div>
 
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 3:</strong>
+            <ol type="a">
+                <li>Consider an insulating rigid box divide by a movable partition into two subsystems (volumes $V_A$ and $V_B$), each filled with gas. Derive a condition for mechanical equilibrium in terms of the change in entropy for each of each subsystem with respect to its volume. Use the fundamental equation of thermodynamics to relate this quantity to pressure.</li>
+                <li>One mole of an ideal gas at 25 degrees is expanded from 20 to 40 litres 1) isothermally and reversible and 2) isothermally and irreversibly against a zero opposing pressure. Determine the energy transferred as heat and the change in entropy of the gas in each case.</li>
+                <li>An iron (Fe) ball of mass 5kg and at a temperature of 607 degrees is thrown into a lake at a temperature of 7 degrees. After some time, the temperature of the iron ball is found to have reduced to that of the lake. Determine th entropy changes of the ball and the lake, assuming that the heat capacity of the iron does not change with temperature.</li>
+                <li>Comment on the results of (b) and (c) in terms of the second law of thermodynamics.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So, for mechanical equilibrium (really any type of equilibrium), we should have both $dU = 0$.</p>
+            <p>\begin{eqnarray*}
+                dU &=& T dS - P dV \\
+                0 &=& T dS - P dV \\
+                P dV &=& T dS \\
+                \frac{dS}{dV} &=& \frac{P}{T} \\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <ol>
+                <li>
+                    <p>For isothermal and ideal gas, the total internal energy does not change: $dU = 0$.</p>
+                    <p>\begin{eqnarray*}
+                        dU &=& T dS - P dV \\
+                        0 &=& T dS - P dV \\
+                        dS &=& \frac{P}{T} dV \\
+                        dS &=& \frac{nR}{V} dV \\
+                        \Delta S &=& nR \int \frac{dV}{V} \\
+                        \Delta S &=& nR \ln \frac{V_f}{V_i} \\
+                        \Delta S &=& (1\;\mathrm{mol})\cdot(8.315\;\mathrm{J/mol/K}) \cdot \ln \frac{0.04 \;\mathrm{m}^3}{0.02  \;\mathrm{m}^3} \\
+                        \Delta S &=& 5.76 \;\mathrm{J/K}
+                        \end{eqnarray*}</p>
+                    <p>For $Q$, consider that $\Delta U = Q + W$, so...</p>
+                    <p>\begin{eqnarray*}
+                        \Delta U = Q + W \\
+                        Q &=& \Delta U - W\\
+                        Q &=& - W \\
+                        Q &=&  \int P dV \\
+                        Q &=&  \int \frac{nRT}{V} dV \\
+                        Q &=&  T nR \int \frac{dV}{V} \\
+                        Q &=& T \Delta S \\
+                        Q &=& (273+25 \;\mathrm{K}) \cdot (5.76 \;\mathrm{J/K}) \\
+                        Q &=& 1717 \;\mathrm{J}
+                        \end{eqnarray*}</p>
+                </li>
+                <li>
+                    <p>As entropy is a state function, only the start and end points matter. So the entropy for this is the same as previous: $\Delta S = 5.76 \;\mathrm{J/K}$.</p>
+                    <p>As the total energy stays the same (state function as before) and as there is no pressure, no work is done. So $Q = \Delta U - W = 0 - 0 = 0$.</p>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <p>Right, so entropy change  and we have constant pressure, then we can just say that $dS = n C_p \int \frac{dT}{T}$. You could derive this result from the thermodynamic identity if you wanted, but it's on the formula sheet.</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& n C_p \int \frac{dT}{T} \\
+                &=& n C_p \ln \frac{T_f}{T_i} \\
+                &=& \frac{4 \;\mathrm{kg}}{0.0558 \;\mathrm{kg/mol}} \cdot (25.10 \;\mathrm{J/mol/K}) \cdot \ln \frac{273+7}{273+607} \\
+                &=& -2060 \;\mathrm{J/K}
+                \end{eqnarray*}</p>
+            <p>For the lake, well it stays at the same temperature, so that integral disappears.</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \frac{Q}{T} \\
+                \Delta S &=& \frac{n C_p \Delta T}{T} \\
+                \Delta S &=& \frac{ \frac{4 \;\mathrm{kg}}{0.0558 \;\mathrm{kg/mol}} \cdot (25.10 \;\mathrm{J/mol/K}) \cdot (607-7 \;\mathrm{K})}{273+7 \;\mathrm{K}} \\
+                \Delta S &=& 3856 \;\mathrm{J/K}
+                \end{eqnarray*}</p>
+        </li>
+        <li>Well, universal entropy increases in both cases, so all good.</li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 4:</strong> A monatomic ideal gas is described by the equation of state $PV = nRT$ and has internal energy $U = \frac{3}{2} n RT$.
+            <ol type="a">
+                <li>Find the entropy $S(T,V)$.</li>
+                <li>Suppose that an isolated ideal gas has temperature $T_0$ and volume $V_0$. Find what thermodynamic states are accessible by (i) adiabatic processes and (ii) irreversible processes. Sketch these states in the $V-T$ plane.</li>
+                <li>Is your expression for the entropy found in (a) extensive? Discuss the Gibbs paradox.</li>
+                <li>consider two distinct monatomic ideal gases, A and B, separated by a partition, but in thermal and mechanical equilibrium with one another. Let $n$ be the total number of moles of gas and $x$ the fraction of these that are species A. Suppose that the partition is removed so that the gases mix uniformly. If the container is adiabatically isolate the temperature and pressure within the container do not increase during the mixing. Starting from your expression for $S(V,T)$, show that the entropy increase of the system is $$\Delta S = -nR[x ln x + (1-x)ln(1-x)]$$. This is known as the entropy of mixing and similar expressions have wide applications from chemistry to quantum information theory.</li>
+                <li>Sketch $\Delta S$ as a function of $x$. For what value of $x$ is $\Delta S$ a maximum?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Right, so if we are given $S(T,V)$, we can break this up when converting to $dS$. Also, we know from the thermodynamic identity that $dS = \frac{dU}{T} + \frac{P}{T} dV$.</p>
+            <p>\begin{eqnarray*}
+                dS &=& \left(\frac{\partial S}{\partial T}\right)_V dT + \left(\frac{\partial S}{\partial V}\right)_T dV \\
+                dS &=& \left(\frac{1}{T}\left(\frac{dU}{dT} + P \frac{dV}{dT} \right) \right)_V dT + \left(\frac{1}{T}\left(\frac{dU}{dV} + P \frac{dV}{dV} \right)\right)_T dV \\
+                dS &=& \left(\frac{1}{T}\left(\frac{3}{2} nR + P \frac{nR}{P} \right) \right)_V dT + \left(\frac{1}{T}\left(0 + P \right)\right)_T dV \\
+                dS &=& \left(\frac{5nR}{2T} \right)_V dT + \left(\frac{P}{T}\right)_T dV \\
+                dS &=& \left(\frac{5nR}{2T} \right)_V dT + \left(\frac{nR}{V}\right)_T dV \\
+                \Delta S &=& nR \left[ \frac{5}{2} \ln \frac{T_f}{T_i} + \ln\frac{V_f}{V_i} \right]\\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so take adiabatic to be a reversible process, such that $\Delta S = 0$. We can get a line for this by rearranging the above equation. I now define $t = \frac{T_f}{T_i}$ and $v = \frac{V_f}{V_i}$.</p>
+            <p>\begin{eqnarray*}
+                 \Delta S &=& nR \left[ \frac{5}{2} \ln \frac{T_f}{T_i} + \ln\frac{V_f}{V_i} \right]\\
+                \frac{5}{2} \ln \frac{T_f}{T_i} + \ln\frac{V_f}{V_i} &=& 0 \\
+                \frac{5}{2} \ln t &=& - \ln v \\
+                \ln t^{5/2} &=& - \ln v \\
+                T_f &=& T_0 (\frac{V_0}{V})^{0.4}
+                \end{eqnarray*}</p>
+            <p>For irreversible processes, we simply have that new entropy is created. Which means anything with a greater $T$ or $V$ is irreversible.</p>
+            <img style="width: 450px" src="images/line.png">
+        </li>
+        <li><p>Yes, it is extensive. If you double the amount of gas you would get double the entropy. Now, Gibbs paradox is simply the apparent decrease in entropy when one thinks that mixing identical particles increase entropy. But we don't consider identical particles, so no problems.</p></li>
+        <li>
+            <p>Right, so assume we are in pressure and thermal equilibrium beforehand:</p>
+            <p>\begin{eqnarray*}
+                \frac{P_1}{T_1} &=& \frac{P_2}{T_2} \\
+                \frac{n_1 R}{V_1} &=& \frac{n_2 R}{V_2} \\
+                \frac{ xn}{V_1} &=& \frac{(1-x)n}{V_2} \\
+                x V_2 &=& (1-x) V_1
+                \end{eqnarray*}</p>
+            <p>Now, the entropy change for each species comes from the change in volume.</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& \Delta S_1 + \Delta S_2 \\
+                &=& x n R \ln\frac{V_1 + V_2}{V_1} + (1-x) n R \ln\frac{V_1 + V_2}{V_2} \\
+                &=& nR \left[x  \ln\frac{xV_1 + (1-x)V_1}{xV_1}   + (1-x)\ln\frac{xV_1 + (1-x)V_1}{(1-x)V_1}   \right] \\
+                &=& nR \left[x  \ln\frac{1}{x}   + (1-x)\ln\frac{1}{(1-x)}   \right]
+                &=& -nR \left[x  \lnx   + (1-x)\ln(1-x)   \right]
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>To verify that the maximal energy increase occurs at 1/2, we can either just look at my beautiful graph, or do some math.</p>
+            <img style="width: 450px;" src="images/entropy.png">
+            <p>Math is hard. We have equal entropy contribution with mixing regardless of species, so the most mixing is possible with $x=0.5$.</p>
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 5:</strong> QQQ
+            <ol type="a">
+                <li></li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p></p>
+        </li>
+    </ol>
+</div>
 <!--
 <div class="question">
 <div class="q">

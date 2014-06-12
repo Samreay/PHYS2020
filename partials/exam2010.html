@@ -272,11 +272,32 @@
     <div class="q">
         <h5><strong>Question 5:</strong> Consider a magnetic system in thermal equilibrium in a magnetic field $H$. For the purposes of this question any changes in the pressure and volume of the system can be ignored. The work done on the system for a small change $dM$ in the magnetisation $M$ is $\mu_0 H dM$, where $\mu_0$ is the permeability of free space.
             <ol type="a">
-                <li></li>
+                <li>Argue that $$T dS = dU - \mu H dM.$$ For the magnetic Gibbs free energy defined by $$G_m(T,H)\equiv U - \mu H M - TS$$ derive the thermodynamic identity $$dG_m = - S dT - \mu_0 M dH.$$</li>
+                <li>Derive the Maxwell relation $$\left(\frac{\partial S}{\partial H}\right)_T = \mu_0 \left( \frac{\partial M}{\partial T}\right)_H.$$</li>
+                <li>The magnetic susceptibility is defined by $$\chi(T) = \left(\frac{\partial M}{\partial H}\right)_{H=0}$$ Use the Maxwell relation above to show that the field dependence of the heat capacity $C(T,H)$ is related to the temperature dependence of the magnetic susceptibility by $$\left(\frac{\partial^2 C}{\partial H^2}\right)_{H=0} = \mu_0 T \left(\frac{\partial^2 \chi}{\partial T^2}\right)$$</li>
+                <li>Consider a reversible adiabatic process in which the magnetisation is slowly changed. Show that the change in temperature is related to the change in magnetisation by $$C(T,H) dT = \mu_0 H dM.$$ What happens to the temperature of a paramagnetic material whn the magnetic field is slowly reduced.</li>
             </ol>
         </h5>
     </div>
     <ol type="a">
+        <li>
+            <p>Right, well if we rearrange what we are given, we have that $dU = TdS + \mu H dM$. This would mean that the internal energy increases with increase permeability (sounds right), increase magnetic field strength (also sounds right) and change in magnetisation (also sounds right). Now, to show that thermodynamic identity, just some basic maths:</p>
+            <p>\begin{eqnarray*}
+                G_m &=& U - \mu H M - T S \\
+                &=& dU - \mu H dM - \mu M dH - T dS - S dT \\
+                &=& TdS + \mu H dM - \mu H dM - \mu M dH - T dS - S dT \\
+                &=& - S dT - \mu M dH
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so let's start with the thermodynamic identity given and apply the <a href="http://en.wikipedia.org/wiki/Maxwell_relations#Derivation">symmetry of second derivatives</a>.</p>
+            <p>\begin{eqnarray*}
+                \frac{\partial^2 G_m}{\partial T \partial H} &=& \frac{\partial^2 G_m}{\partial H \partial T} \\
+                \frac{\partial}{\partial T }\frac{\partial G_m}{\partial H} &=& \frac{\partial}{\partial H }\frac{\partial G_m}{ \partial T} \\
+                \frac{\partial}{\partial T }(-\mu M) &=& \frac{\partial}{\partial H } - S \\
+                \left(\frac{\partial M}{\partial T }\right)_{H} \mu  &=& \left(\frac{\partial  S}{\partial H}\right)_T  \\
+                \end{eqnarray*}</p>
+        </li>
         <li>
             <p></p>
         </li>

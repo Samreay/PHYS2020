@@ -20,7 +20,7 @@
             <p>Direction of spontaneous change is the direction the reaction/process would take if simply left alone. For only thermal situations, this corresponds to an increase in entropy, however a more general statement when taking other forms of energy into account is that the direction of spontaneity is to minimise the Gibbs free energy. I am not sure what is meant about the distribution of energy, though I would probably say that it tends to become disordered. Ie kinetic energy - synchronised motion of particles - will tend to become thermal energy (which is randomised motion of particles).</p>
         </li>
         <li>
-            <p>The second law says that entropy does not decrease. As such if entropy increases, we should see increase in energy dispersion. In terms of reversible heat engines, reversible implies there is no generation of entropy. Now, the efficiency of a heat engine can be given by</p>
+            <p>The second law says that entropy does not decrease. As such if entropy increases, we should see increase in energy dispersion. In terms of reversible heat engines, reversible implies there is no generation of entropy. The reason the second law states all engines have the same maximal efficiency at a given temperature difference is because maximal efficiency occurs when there is no entropy generated, and thus the ratio of $Q_H$ to $Q_C$ must be fixed to ensure that this is true. The left over energy is what we can use as work. Going more in depth than I need to, the efficiency of a heat engine can be given by</p>
             <p>\begin{eqnarray*}
                 e &=& \frac{W}{Q_H} \\
                 &=& \frac{Q_H - Q_C}{Q_H} \\
@@ -99,6 +99,89 @@
         </li>
     </ol>
 </div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 3:</strong>
+            <ol type="a">
+                <li>The efficiency of a heat engine is defined as $\epsilon \equiv \frac{|W|}{Q_h}$, where $Q_h$ is the heat absorbed and $W$ is the work performed during one cycle. Prove that the maximum possible efficiency is $\epsilon = 1 - \frac{T_c}{T_h}$.</li>
+                <li>The cycle involved in the operation of an internal combustion engine is called the Otto cycle. Air can be considered to be the working substance and can be assumed to be an ideal gas. The cycle consists of the following steps:
+                    <ol>
+                        <li>reversible adiabatic compression from A to B</li>
+                        <li>reversible constant volume pressure increase from B to C due to the combustion of a small amount of fuel</li>
+                        <li>reversible adiabatic expansion from C to D</li>
+                        <li>reversible and constant volume pressure decrease back to A.</li>
+                    </ol>
+                    Sketch the $p-V$ diagram for the cycle, and comment on the qualitative difference between the work done by an Otto cycle and that done by a Carnot cycle operating between the same maximum and mimimum volumes.
+                </li>
+                <li>Determine the change in entropy of the gas for each step of the Otto cycle and sketch a $T-S$ diagram. What features of the diagram indicate that the efficiency will be less than the Carnot efficiency?</li>
+                <li>Prove that the efficiency of the Otto cylce is given by $$\epsilon = 1 - \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{\gamma - 1}$$ where $\gamma \equiv C_p/C_V$. Give a numerical estimate of the efficiency, assuming a compression ratio of 10.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Maximum possible efficiency would occur when we do not have to waste energy dumping out entropy into the cold reservoir, so we have a stipulation that $dS = 0$. From this, we know that the entropy gained in the heating phase should be lost totally in the cooling phase. Also, to not generate more entropy when looking at the whole universe, we should ensure there is no temperature difference between the system and the reservoirs when there is heat flowing. Also, yes, this is just Q1 all over again.</p>
+            <p>\begin{eqnarray*}
+                dS &=& 0 \\
+                dS_h &=& - dS_c \\
+                \frac{Q_h}{T_h} &=& - \frac{Q_c}{T_c} \\
+                \frac{Q_c}{Q_h} &=& - \frac{T_h}{T_c}
+                \end{eqnarray*}</p>
+            <p>The efficiency of an engine can be written as </p>
+            <p>\begin{eqnarray*}
+                \epsilon &=& \frac{|W|}{Q_h} \\
+                &=& \frac{|Q_h - Q_c|}{Q_h} \\
+                &=& 1 - \frac{|Q_c|}{Q_h} \\
+                &=& 1 - \frac{T_h}{T_c}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>The Otto cycle courtesy of the internet. In one of the other pages I've got an Otto cycle I made myself, but this one has colour!</p>
+            <img style="width: 400px;" src="images/otto2.png">
+            <p>Qualitatively, the Otto cycle has constant volume expansion where the Carnot cycle has an adiabat, and adiabatic expansion where the carnot cycle has isothermal expansion. However, as the Carnot cycle is horrible inefficient, the Otto cycle generates a lot more work (has more area inside the graph).</p>
+        </li>
+        <li>
+            <p>Okay, so for each step, find the entropy.</p>
+            <ol>
+                <li>It is reversible and adiabatic, so $\Delta S = 0$.</li>
+                <li>Pressure increase is due to an inflow of heat from the igniting gas. $\Delta S = \int \frac{Q}{T} = C_v \ln\frac{T_C}{T_B}$</li>
+                <li>It is reversible and adiabatic, so $\Delta S = 0$.</li>
+                <li>Pressure decrease is due to an outflow of heat via radiator cooling. $\Delta S = \int \frac{Q}{T} = C_v \ln\frac{T_A}{T_D}$</li>
+            </ol>
+            <p>For the T-S diagram, it looks like below. The reason this is less efficient than a Carnot diagram is because you are generating entropy. A Carnot diagram will have isotherms (horizontal lines).</p>
+            <img style="width: 400px;" src="images/otto3.png">
+        </li>
+        <li>
+            <p>Right, so let's start with the definition of efficiency: $\epsilon = 1 - \frac{Q_c}{Q_h}$. We can then write $Q$ in terms of the temperature change, and determine the temperature change using the adiabatic expansion equations.</p>
+            <p>\begin{eqnarray*}
+                \epsilon &=& 1 - \frac{Q_c}{Q_h} \\
+                &=& 1 - \frac{C_V \Delta T_{CB}}{C_V \Delta T_{AD}} \\
+                &=& 1 - \frac{T_C - T_B}{T_A - T_D} \\
+                \end{eqnarray*}</p>
+            <p>Applying the adiabatic expansion formulas:</p>
+            <p>\begin{eqnarray*}
+                T_A^c V_{\text{min}} = T_B^c V_{\text{max}} &\rightarrow& T_B = T_A \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{1/c} \\
+                T_C^c V_{\text{max}} = T_D^c V_{\text{min}} &\rightarrow& T_C = T_D \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{1/c} \\
+                \end{eqnarray*}</p>
+            <p>We can sub those values for $T_C$ and $T_B$</p>
+            <p>\begin{eqnarray*}
+                \epsilon &=& 1 - \frac{T_C - T_B}{T_A - T_D} \\
+                \epsilon &=& 1 -  \frac{T_A - T_D}{T_A - T_D} \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{1/c}\\
+                \epsilon &=& 1 -  \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{1/c}\\
+                \end{eqnarray*}</p>
+            <p>Looking at $c$ and $\gamma$ now</p>
+            <p>\begin{eqnarray*}
+                \gamma - 1 &=& \frac{C_{pm}}{C_{vm}} \\
+                &=& \frac{C_{pm} - C_{vm}}{C_{vm}} \\
+                &=& \frac{R}{C_{vm}} \\
+                &=& \frac{1}{c}
+                \end{eqnarray*}</p>
+            <p>Right, almost there. Just got to combine the last two steps, we get $$\epsilon = 1 -  \left(\frac{V_{\text{min}}}{V_{\text{max}}}\right)^{\gamma - 1}$$ As for a numerical estimate, given air has $f = 5$, using the equipartition theorem, we have $C_{vm} = \frac{1}{n} \frac{dU}{dT} = \frac{5}{2}R$. Thus $\frac{1}{c} = \frac{R}{5R/2} = \frac{2}{5}$. So this means $$\epsilon = 1 - 0.1^{2/5} = 0.6$$</p>
+        </li>
+    </ol>
+</div>
+
 
 <!--
 <div class="question">

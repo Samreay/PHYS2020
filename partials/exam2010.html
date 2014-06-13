@@ -275,7 +275,7 @@
                 <li>Argue that $$T dS = dU - \mu H dM.$$ For the magnetic Gibbs free energy defined by $$G_m(T,H)\equiv U - \mu H M - TS$$ derive the thermodynamic identity $$dG_m = - S dT - \mu_0 M dH.$$</li>
                 <li>Derive the Maxwell relation $$\left(\frac{\partial S}{\partial H}\right)_T = \mu_0 \left( \frac{\partial M}{\partial T}\right)_H.$$</li>
                 <li>The magnetic susceptibility is defined by $$\chi(T) = \left(\frac{\partial M}{\partial H}\right)_{H=0}$$ Use the Maxwell relation above to show that the field dependence of the heat capacity $C(T,H)$ is related to the temperature dependence of the magnetic susceptibility by $$\left(\frac{\partial^2 C}{\partial H^2}\right)_{H=0} = \mu_0 T \left(\frac{\partial^2 \chi}{\partial T^2}\right)$$</li>
-                <li>Consider a reversible adiabatic process in which the magnetisation is slowly changed. Show that the change in temperature is related to the change in magnetisation by $$C(T,H) dT = \mu_0 H dM.$$ What happens to the temperature of a paramagnetic material whn the magnetic field is slowly reduced.</li>
+                <li>Consider a reversible adiabatic process in which the magnetisation is slowly changed. Show that the change in temperature is related to the change in magnetisation by $$C(T,H) dT = \mu_0 H dM.$$ What happens to the temperature of a paramagnetic material when the magnetic field is slowly reduced.</li>
             </ol>
         </h5>
     </div>
@@ -299,7 +299,31 @@
                 \end{eqnarray*}</p>
         </li>
         <li>
-            <p></p>
+            <p>So apparently we need to start of with $C = \frac{dU}{dT}$. Also, the fact this is at $H=0$ is super important, and it is how I get rid of terms.</p>
+            <p>\begin{eqnarray*}
+                C &=& \frac{dU}{dT} \\
+                C dT &=& dU \\
+                C dT &=& T dS + \mu H dM \\
+                C dT &=&  T dS \;\;\; \text{given that}\;H=0 \\
+                C &=& T \frac{dS}{dT} \\
+                \frac{\partial C}{\partial H} &=& T  \frac{\partial }{\partial H}\frac{dS}{dT} \\
+                \frac{\partial C}{\partial H} &=& T  \frac{\partial }{\partial T}\frac{\partial S}{\partial H}\;\;\; \text{given that we're talking about conservative state functions} \\
+                \frac{\partial C}{\partial H} &=& T  \frac{\partial }{\partial T} \mu \frac{\partial M}{\partial T}\\
+                \frac{\partial C}{\partial H} &=& T\mu   \frac{\partial^2 M}{\partial T^2}\\
+                \frac{\partial^2 C}{\partial H^2} &=& T\mu   \frac{\partial^2 }{\partial T^2} \frac{\partial M}{\partial H}\\
+                \frac{\partial^2 C}{\partial H^2} &=& T\mu   \frac{\partial^2 }{\partial T^2} \chi(T)\\
+                \frac{\partial^2 C}{\partial H^2} &=& T\mu   \frac{\partial^2 \chi(T)}{\partial T^2} \\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So we use the same starting point as before, but instead of $H=0$, we have $dS = 0$ as it is a reversible process.</p>
+            <p>\begin{eqnarray*}
+                C &=& \frac{dU}{dT} \\
+                C dT &=& dU \\
+                C dT &=& T dS + \mu H dM \\
+                C dT &=& \mu H dM \\
+                \end{eqnarray*}</p>
+            <p>Assuming a constant positive $C$, if we decrease the magnetic field $(H$,$\mu$ > 0)$ we must also have a decrease in temperature. Welcome to magnetic cooling.</p>
         </li>
     </ol>
 </div>

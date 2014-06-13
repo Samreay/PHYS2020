@@ -1,0 +1,126 @@
+<h2>Part A</h2>
+<hr />
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 1:</strong></h5>
+        <h5>
+            <ol type="a">
+                <li>Give a clear and precise statement of the zeroth law of thermodynamics. Use it to explain what temperature is.</li>
+                <li>Explain what is meant by 'direction of spontaneous change'. Give a concise statement of the second law of thermodynamics, and use it to give a criterion for spontaneous change. What happens to distribution of energy during a spontaneous change?</li>
+                <li>Give some consequences of the second law for the transformation of energy. In particular, explain why the second law of thermodynamics implies that all reversible heat engines operating between the same hot and hold reservoirs must have the same efficiency, regardless of construction.</li>
+                <li>Give a clear, concise and pricese statement of the third law of thermodynamics. What does this law imply about the heat capacity $C_p$ of a substance as $T\rightarrow 0$?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Thermal equilibrium is transitive. Temperature is a value which is the same for all objects in thermal equilibrium.</p>
+        </li>
+        <li>
+            <p>Direction of spontaneous change is the direction the reaction/process would take if simply left alone. For only thermal situations, this corresponds to an increase in entropy, however a more general statement when taking other forms of energy into account is that the direction of spontaneity is to minimise the Gibbs free energy. I am not sure what is meant about the distribution of energy, though I would probably say that it tends to become disordered. Ie kinetic energy - synchronised motion of particles - will tend to become thermal energy (which is randomised motion of particles).</p>
+        </li>
+        <li>
+            <p>The second law says that entropy does not decrease. As such if entropy increases, we should see increase in energy dispersion. In terms of reversible heat engines, reversible implies there is no generation of entropy. Now, the efficiency of a heat engine can be given by</p>
+            <p>\begin{eqnarray*}
+                e &=& \frac{W}{Q_H} \\
+                &=& \frac{Q_H - Q_C}{Q_H} \\
+                &=& 1 - \frac{Q_C}{Q_H} \\
+                \end{eqnarray*}</p>
+            <p>For there to be no new entropy created, we have to be receiving heat flow at the same temperature as the reservoir.</p>
+            <p>\begin{eqnarray*}
+                \Delta S &=& 0 \\
+                \Delta S_H &=& - \Delta S_C \\
+                \frac{Q_H}{T_H} &=& - \frac{-Q_C}{T_C} \\
+                \frac{T_H}{T_C} &=& \frac{Q_C}{Q_H} \\
+                \end{eqnarray*}</p>
+            <p>Putting these together gives $e = 1 - \frac{T_H}{T_C}$.</p>
+        </li>
+        <li>
+            <p>The third law states that an objects entropy approaches zero when its temperature approaches absolute zero. As to what this says about the constant pressure heat capacity of an object, well, we know that $S(T_f) = S(T_i) + \int \frac{C_p dT}{T}$. Taking $T_i = 0$, we see that we get $$S(T_f) = \int_0^{T_f} \frac{C_p dT}{T}$$ Now, this has to approach zero as $T_f$ approaches zero. Unfortunately, we can see that as $T$ is on the denominator, it grows as it approaches zero. In order for the third law to be correct, the numerator must shrink even faster, and so $C_p \rightarrow 0$.</p>
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 2:</strong>
+            <ol type="a">
+                <li>Prove that the pressure and volume of an ideal gas undergoing reversible adiabatic expansion obey the expression $pV^\gamma$, where $\gamma \equiv \frac{C_p}{C_V}$.</li>
+                <li>Sketch the adiabats and isotherms of an ideal gas on a $p-V$ diagram. Give a physical explanation for the difference between the two types of curves.</li>
+                <li>You are pumping up your bicycle tire with a hand pump: air is drawn into a steel cylinder at room temperature and atmospheric pressure. A piston compresses the air rapidly. The walls are neither adiabatic nor diathermal but somewhere in between. As a result, the cylinder feels hot to the touch. If the system is defined as the gas in the cylinder, and the process under consideration is a single in-stroke of the piston, which statements, if any, are true?
+                    <ol>
+                        <li>The system has acquired heat</li>
+                        <li>Positive work has been done by the system</li>
+                        <li>The internal energy of the system has increased.</li>
+                    </ol>
+                </li>
+                <li>In a deisel engine, atmospheric air is quickly compressed to about 1/20 of its original volume. Estimate the temperature of the air after compression, and suggest why a Diesel engine does not require spark plugs.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Okay, so this is just a long maths question. We will need to use the ideal gas law, equipartition theorem, thermodynamic identity for $dU$ and the fact that $C_P = nR + C_V$. So, starting with the identity, let us begin by using $dS = 0$.</p>
+            <p>\begin{eqnarray*}
+                dU &=& T dS - P dV \\
+                \frac{1}{2} nR dT &=& - P dV \\
+                C_V dT &=& -nRT \frac{dV}{V} \\
+                C_V \int \frac{dT}{T} &=& -nR \int \frac{dV}{V} \\
+                \ln \left(\frac{T_f}{T_i}\right)^{C_V} &=& \ln \left( \frac{V_i}{V_f} \right)^{nR} \\
+                \left(\frac{T_f}{T_i}\right) &=& \left( \frac{V_i}{V_f} \right)^{nR/C_v} \\
+                \left(\frac{P_f V_f}{P_i V_i}\right) &=& \left( \frac{V_i}{V_f} \right)^{nR/C_v} \\
+                \left(\frac{P_f}{P_i}\right) &=& \left( \frac{V_i}{V_f} \right)^{nR/C_v} \left(\frac{V_i}{V_f}\right) \\
+                \left(\frac{P_f}{P_i}\right) &=& \left( \frac{V_i}{V_f} \right)^{(nR + C_V)/C_V} \\
+                \left(\frac{P_f}{P_i}\right) &=& \left( \frac{V_i}{V_f} \right)^{(C_P)/C_V} \\
+                P_f V_f^{C_P/C_V} &=& P_i V_i^{C_P/C_V} \\
+                P_f V_f^\gamma &=& P_i V_i^\gamma \\
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>Right, so thanks to Wikipedia for this image.</p>
+            <img style="width: 400px;" src="images/ai.png">
+            <p>As for a physical explanation, an isotherm keeps constant temperature, so so $PV$ is constant. An adiabat can change temperature, as the only stipulation is that $Q=0$. In the diagram above, from left to right would correspond to quickly pulling out a piston so that the volume increases. The pressure drops, and so does the temperature.</p>
+        </li>
+        <li>
+            <ol>
+                <li>The process is adiabatic. The system does not acquire heat.</li>
+                <li>The piston compresses air rapidly, so $dV < 0$. Given $W = - P dV$, this means the work done <strong>on</strong> the system is positive. As positive work is done on the system, the work done <strong>by</strong> the system is negative.</li>
+                <li>Given that $\Delta U = Q + W$, $Q = 0$ and $W > 0$, this seems like a sensible conclusion.</li>
+            </ol>
+        </li>
+        <li>
+            <p>Right, so we can use $VT^c = \text{const}$, with $c = C_{vm}/R$, where for air $f=5$ such that $C_v = \frac{5}{2} nR$, thus $c = \frac{5}{2}$. Starting with $T = 300\;\mathrm{K}$,</p>
+            <p>\begin{eqnarray*}
+                T_f &=& T_i \left(\frac{V_i}{V_f}\right)^{1/c} \\
+                &=& (300 \;\mathrm{K}) \cdot \left(20\right)^{2/5} \\
+                &=& 994\;\mathrm{K}
+                \end{eqnarray*}</p>
+            <p>Spontaneous combustion achieved. Next stop... the moon.</p>
+        </li>
+    </ol>
+</div>
+
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>Question 2:</strong> QQQ
+    <ol type="a">
+        <li></li>
+    </ol>
+</h5>
+</div>
+    <ol type="a">
+        <li>
+            <p></p>
+        </li>
+    </ol>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

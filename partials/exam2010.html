@@ -327,6 +327,72 @@
         </li>
     </ol>
 </div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong>
+            <ol type="a">
+                <li>Use the table of data to determine whether crystals of graphite or crystals of diamond are the thermodynamically stable form of carbon at room temperature and ambient pressure.</li>
+                <li>On the same graph sketch the Gibbs free energy (at room temperature) of diamond and graphite as a function of pressure. You may assume that the molar volumes do not vary significantly with pressure. Use your graph to estimate the pressure at room temperature at which the relative stability of diamond and graphite changes.</li>
+                <li>At room temperature estimate the slope $\frac{dP}{dT}$ of the phase boundary between diamond and graphite. Why should the slope of the phase boundary be zero near absolute zero?</li>
+                <li>Summarise your results in a sketch of the diamond-graphite phase diagram as a function of pressure and temperature. Explain why your diagram does not have a critical point.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Right, so pulling values from the tables gives</p>
+            <table class="table table-striped table-bordered table-hover table-condensed" border="1" style="width:500px; margin: auto; margin-bottom: 20px;">
+                <tr>
+                    <th>Name</th>
+                    <th>$\Delta_H$ (kJ)</th>
+                    <th>$\Delta_G$ (kJ)</th>
+                    <th>$S$ (J/K)</th>
+                    <th>$V$ (cm$^3$)</th>
+                </tr>
+                <tr>
+                    <td>Diamond</td>
+                    <td>1.895</td>
+                    <td>2.9</td>
+                    <td>2.38</td>
+                    <td>3.42</td>
+                </tr>
+                <tr>
+                    <td>Graphite</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5.74</td>
+                    <td>5.30</td>
+                </tr>
+            </table>
+            <p>At room temperature and pressure, graphite has the lowest Gibbs free energy, so it is the most stable.</p>
+        </li>
+        <li>
+            <p>So what we want really are two functions of $G(P)$. As we are looking at constant temperature, we can see that $dG = V dP$. Given that $V$ is independent of $P$ (given in the question) we can just integrate to get $G(P) = G_0 + VP$, where $P$ is the change in pressure, $V$ is the molar volume and $G_0$ is the Gibbs free energy at our reference point (1atm at 298K).</p>
+            <p>So, for diamond we are sketching $G(P) = 2900 + (3.42\times10^{-6})P$, and for graphite we are sketching $G(P) = 0 + (5.3\times10^{-6})P$. Note that you need to be careful of units here. Now, courtesy of MATLAB, here is the graph:</p>
+            <img style="width:450px;" src="images/diamond.png">
+            <p>Notice that the crossover occurs around 16000 atmospheres of pressure.</p>
+        </li>
+        <li>
+            <p>So let's just use the Clausius-Clapeyron relation here to state that</p>
+            <p>\begin{eqnarray*}
+                \frac{dP}{dT} &=& \frac{\Delta S}{\Delta V} \\
+                &=& \frac{S_2 - S_1}{V_2 - V_1} \\
+                &=& \frac{(2.38-5.74) \;\mathrm{J/K}}{(3.42 - 5.30) \;\mathrm{cm}^3} \\
+                &=& 1.79 \;\mathrm{J/K/cm}^3
+                \end{eqnarray*}</p>
+            <p>This value would go to zero at absolute zero as by the third law entropy at absolute zero is zero. Thus, as $S_2$ and $S_1$ are converging on 0, $\Delta S$ converges on zero as well.</p>
+        </li>
+        <li>
+            <p>Just like the 2012 exam.</p>
+            <img src="images/dg.png">
+            <p>Yeah, no critical point because unlike a gas and a liquid (who's properties can converge together), diamond and graphite do not converge to have the same properties under any condition.</p>
+        </li>
+    </ol>
+</div>
+
+
 <!--
 <div class="question">
 <div class="q">

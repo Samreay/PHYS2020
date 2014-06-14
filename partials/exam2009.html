@@ -188,7 +188,7 @@
             <ol type="a">
                 <li>Sketch the phase diagram of a type I superconductor as a function of temperature and external magnetic field.</li>
                 <li>Derive the Clausius-Clapeyron relation $$\frac{dH_c(T)}{dT} = - \frac{S_n - S_s}{\mu(M_n - M_s)}$$ which describes the slope of the phase boundary where the subscripts $s$ and $n$ denote values in the superconducting and normal metal phases, respectively.</li>
-                <li>The superconducting state displays perfect diamagnetism $(B=0)$ due to the Meissner effect. The normal metal phase has a negligible magnetisation compared to the superconducting phase. Show that the latent heat per unit volume is given by $$l = -\mu_0 T H_c \frac{dH_c}{dT}$$</li>
+                <li>The superconducting state displays perfect diamagnetism $(B=0)$ due to the Meissner effect. The normal metal phase has a negligible magnetisation compared to the superconducting phase. Show that the latent heat per unit volume is given by $$L = -\mu_0 T H_c \frac{dH_c}{dT}$$</li>
                 <li>Show that when the transition occurs at zero field there is a discontinuity in the specific heat capacity (per unit volume) given by $$c_s - c_n = -\mu_0 T_c \left(\frac{dH_c}{dT}\right)^2$$</li>
                 <li>Denote the critical point on the phase diaram. What is the slope of the phase boundary at zero temperature. Why does it have this value?</li>
             </ol>
@@ -214,8 +214,19 @@
                 \end{eqnarray*}</p>
         </li>
         <li>
-            <p>No idea. Waiting on Joel's feedback.</p>
+            <p>Right, so the first thing to do is realise that $L = T \Delta S$.</p>
+            <p>For a superconducting state, the question says $B = 0$, thus we have that $H = -M_s$ from $B = \mu(H+M)$.</p>
+            <p>Also, given that the question states $M_n \ll M_s$, we can say that $M_n - M_s = - M_s$. Of course, taking the equation on the line above into this means that $M_n - M_s = H$.</p>
+            <p>So lets write out that Clausius-Clapeyron relation from (b) then.</p>
+            <p>\begin{eqnarray*}
+                \frac{dH_c(T)}{dT} &=& - \frac{S_n - S_s}{\mu(M_n - M_s)} \\
+                \frac{dH_c(T)}{dT} &=& - \frac{\Delta S}{\mu H} \\
+                - \mu H \frac{dH_c(T)}{dT} &=& \Delta S \\
+                - \mu T H \frac{dH_c(T)}{dT} &=& T \Delta S \\
+                L&=& - \mu T H \frac{dH_c(T)}{dT}
+                \end{eqnarray*}</p>
         </li>
+        <li></li>
     </ol>
 </div>
 

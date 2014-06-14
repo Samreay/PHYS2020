@@ -59,16 +59,16 @@
             <img src="images/water.png">
         </li>
         <li>
-            <p>Okay, so first thing to note is that we are going to use the Clausius-Clapeyron relation, which requires $\Delta P$, $T$, $L$ and $\Delta v$, which is the change in specific volume. Now, the change in specific volume is in cubic metres per kilogram, so this is just the inverse change in density (kg/m$^3$) we are given in the question. Also note that the pressure is easily found if we consider a rectangular prism 1m on the side and 50m tall of ice: $P = F/A = V\rho g/A = g \rho h a^2 / a^2 = g\rho h$.</p>
+            <p>Okay, so first thing to note is that we are going to use the Clausius-Clapeyron relation, which requires $\Delta P$, $T$, $L$ and $\Delta v$, which is the change in specific volume. Note that the pressure is easily found if we consider a rectangular prism 1m on the side and 50m tall of ice: $P = F/A = V\rho g/A = g \rho h a^2 / a^2 = g\rho h$.</p>
+            <p>Also, as $v = \frac{1}{\rho}$, we have $\Delta v = \frac{1}{\rho_i} - \frac{1}{\rho_w} = 90.9\;\mathrm{cm}^3\mathrm{/kg}$</p>
             <p>\begin{eqnarray*}
                 \frac{dP}{dT} &=& \frac{L}{T\Delta v} \\
-                \frac{dP}{dT} &=& \frac{L\Delta \rho}{T} \\
-                \Delta T &=& \frac{\Delta P T}{L\Delta \rho} \\
-                \Delta T &=& \frac{g \rho h T}{L\Delta \rho} \\
-                \Delta T &=& \frac{(9.81\;\mathrm{m/s}^2)\cdot(916.7\;\mathrm{kg/m}^3)\cdot (50\;\mathrm{m}) \cdot (273\;\mathrm{K})}{(334\;000 \;\mathrm{J/kg})\cdot ((916.7-1000)\;\mathrm{m}^3\mathrm{/kg})} \\
-                \Delta T &=& -4.4 \;\mathrm{K}
+                \Delta T &=& \frac{\Delta P T\Delta v}{L} \\
+                \Delta T &=& \frac{g \rho h T\Delta v}{L} \\
+                \Delta T &=& \frac{(9.81\;\mathrm{m/s}^2)\cdot(916.7\;\mathrm{kg/m}^3)\cdot (50\;\mathrm{m}) \cdot (273\;\mathrm{K})\cdot (90.9\times10^{-6}\;\mathrm{m}^3\mathrm{/kg})}{(334\;000 \;\mathrm{J/kg})} \\
+                \Delta T &=& 0.033 \;\mathrm{K}
                 \end{eqnarray*}</p>
-            <p>That is a far larger change than I was expecting, so unless my math is wrong, that water would be melted if it was above -4.4 degrees Celsius.</p>
+            <p>Only a tiny little change in temperature. Ah well.</p>
         </li>
     </ol>
 </div>

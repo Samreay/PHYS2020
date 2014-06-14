@@ -42,7 +42,7 @@
             <ol type="a">
                 <li>Derive the thermodynamic equation of state from the fundamental equation of thermodynamics. Explain the significance of the internal pressure $\pi_T$.</li>
                 <li>Derive the general relationship between the Joule-Thomson coefficient $\mu$ and isothermal Joule-Thomson coefficient $\mu_T$.</li>
-                <li>Given that the Joule-Thmson coefficient for helium is $\mu = -0.062\;\mathrm{K/atm}$. calculate the energy that must be remove as heat to maintain constant temperature when 20.0 mol of helium flows through a throttle in an isothermal Joule-Thomson experiment and the pressure drop is 100atm.</li>
+                <li>Given that the Joule-Thmson coefficient for helium is $\mu = -0.062\;\mathrm{K/atm}$. calculate the energy that must be removed as heat to maintain constant temperature when 20.0 mol of helium flows through a throttle in an isothermal Joule-Thomson experiment and the pressure drop is 100atm.</li>
             </ol>
         </h5>
     </div>
@@ -64,7 +64,7 @@
                 \end{eqnarray*}</p>
         </li>
         <li>
-            <p>I dislike this question. What we have to realise upfront is that $\Delta H = Q$ (I don't know why, given this isn't constant pressure). From there what we can do is to find an equation that relates $H$ with $P$, which turns out to be $\left(\frac{\partial H}{\partial P}\right)_T = \mu_T$. From there we can math.</p>
+            <p>I dislike this question. What we have to realise upfront is that $\Delta H = Q$. You can justify this if you realise that the input to the system is just cooling it (removing heat energy), which is $Q$. The output is the change in the process, which is the change in the enthalpy. These must be equal, or we lose energy somewhere into the magical void. From there what we can do is to find an equation that relates $H$ with $P$, which turns out to be $\left(\frac{\partial H}{\partial P}\right)_T = \mu_T$. From there we can math.</p>
             <p>\begin{eqnarray*}
                 \mu_T &=& \left(\frac{\partial H}{\partial P}\right)_T \\
                 -C_P \mu &=& \frac{\partial H}{\partial P} \\
@@ -74,7 +74,7 @@
                 Q &=& - \left((20.0\;\mathrm{mol}) \cdot (8.315 \;\mathrm{J/mol/K}) \frac{5+2}{2}\right) \cdot (-0.062 \;\mathrm{K/atm})\cdot (-100 \;\mathrm{atm}) \\
                 Q &=& -3.6 \;\mathrm{kJ}
                 \end{eqnarray*}</p>
-            <p>Note that I disagree with Joel. he uses $C_V$, and I use $C_P$. Also, it seems he dropped a negative sign.</p>
+            <p>Note that I disagree with Joel. he uses $C_V$, and I use $C_P$. Also, it seems he dropped a negative sign. ALso, another way to think about this question would just be to use $\mu$ instead of $\mu_T$. You could then figure out how much the temperature drops itself in the change, and then figure out the energy needed to put it back to its original value.</p>
         </li>
     </ol>
 </div>
@@ -122,7 +122,45 @@
         </li>
         <li>
             <p>Right, so now looking at $CO_2$.</p>
-
+            <ol type="i">
+                <li>It is quasistatic (so we assume) and adiabatic, so $Q = 0$.</li>
+                <li>
+                    <p>Work is against constant pressure.</p>
+                    <p>\begin{eqnarray*}
+                        W &=& - PV \\
+                        &=& - (2.5\cdot 101325 \;\mathrm{Pa}) \cdot \left(\frac{100\cdot 25}{100^3} \;\mathrm{m}^3 \right) \\
+                        &=& -633.3 \;\mathrm{J}
+                        \end{eqnarray*}</p>
+                </li>
+                <li>Change in internal energy is the same as above.</li>
+            </ol>
+        </li>
+        <li>
+            <p>So, changing the entropy huh. Now, although (b) was an adiabatic process, due to the pressure difference from the internal and external pressure, it is <strong>not</strong> quasistatic, so $\Delta S \ne 0$.</p>
+            <p>To find the change in entropy, we are going to need to find the final temperature and volume.</p>
+            <p>\begin{eqnarray*}
+                T_f &=& T_i + \Delta T \\
+                &=& T_i + \frac{2\Delta U}{fnR}
+                \end{eqnarray*}</p>
+            <p>For the initial volume, we use IDL:</p>
+            <p>\begin{eqnarray*}
+                V_i &=& \frac{nRT}{P}
+                \end{eqnarray*}</p>
+            <p>For the final volume, we add on the expansion</p>
+            <p>\begin{eqnarray*}
+                V_f &=& V_i + Ah
+                V_f &=& \frac{nRT}{P} + Ah
+                \end{eqnarray*}</p>
+            <p>Now to actually look at the entropy, we start with the thermodynamic identity</p>
+            <p>\begin{eqnarray*}
+                dU &=& T dS - P dV \\
+                dS &=& \frac{dU}{T} + \frac{P}{T} dV \\
+                dS &=& \frac{nRf dT}{2 T} + nR \frac{dV}{V} \\
+                \Delta S &=& nR \left[ \frac{f}{2} \ln \frac{T_f}{T_i} + \ln \frac{V_f}{V_i} \right] \\
+                \Delta S &=& nR \left[ \frac{f}{2} \ln \frac{T_i + \frac{2\Delta U}{fnR}}{T_i} + \ln \frac{\frac{nRT}{P} + Ah}{\frac{nRT}{P}} \right] \\
+                &=& 4.39 \;\mathrm{J/K}
+                \end{eqnarray*}</p>
+            <p>To extract the maximum work, a reversible process means that the $TdS$ created can be turned back into work. The formula for this is $dS = \frac{Q}{T}$. To maximise the work, we maximise the temperature to be the greatest in the process. Why this is allowed, given that $T$ is not constant, I don't know. But essentially we have $T\Delta S = Q$, so we find that $Q = (273+35\;\mathrm{K})\cdot (4.39 \;\mathrm{J/K}) = 1352 \;\mathrm{J}$.</p>
         </li>
     </ol>
 </div>

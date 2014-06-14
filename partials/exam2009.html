@@ -189,14 +189,92 @@
                 <li>Sketch the phase diagram of a type I superconductor as a function of temperature and external magnetic field.</li>
                 <li>Derive the Clausius-Clapeyron relation $$\frac{dH_c(T)}{dT} = - \frac{S_n - S_s}{\mu(M_n - M_s)}$$ which describes the slope of the phase boundary where the subscripts $s$ and $n$ denote values in the superconducting and normal metal phases, respectively.</li>
                 <li>The superconducting state displays perfect diamagnetism $(B=0)$ due to the Meissner effect. The normal metal phase has a negligible magnetisation compared to the superconducting phase. Show that the latent heat per unit volume is given by $$l = -\mu_0 T H_c \frac{dH_c}{dT}$$</li>
-                <li>Show that when the transition occurs at zero field there is a discontinuity in the specific heat capacity (per unit volume) given by $c_s - c_n = -\mu_0 T_c \left(\frac{dH_c}{dT}\right)^2$$</li>
+                <li>Show that when the transition occurs at zero field there is a discontinuity in the specific heat capacity (per unit volume) given by $$c_s - c_n = -\mu_0 T_c \left(\frac{dH_c}{dT}\right)^2$$</li>
                 <li>Denote the critical point on the phase diaram. What is the slope of the phase boundary at zero temperature. Why does it have this value?</li>
             </ol>
         </h5>
     </div>
     <ol type="a">
         <li>
+            <p>Okay, so the phase boundary exists when $dG = 0$, which means $S dT = -\mu_0 M dH$. Rerranging this gives $\frac{dT}{dH} = \frac{-\mu_0 M}{S}$. If we assume all variables independent of $H$ (which is almost certainly wrong), we can see that we would get a straight line with gradient $\frac{-\mu_0 M}{S}$ as our plot. This isn't too inaccurate: a real superconductor has it a curved line, not straight, but in the same section of the plot.</p>
+            <img style="width: 400px;" src="images/super.png">
+        </li>
+        <li>
+            <p>This is essentially the same question as above. But here is the math in full.</p>
+            <p>\begin{eqnarray*}
+                dG &=& - S dT - \mu_0 M dH \\
+                0 &=& - S dT - \mu_0 M dH \\
+                \mu_0 M dH &=& - S dT \\
+                \frac{dH}{dT} &=& - \frac{S}{\mu_0 M}
+                \end{eqnarray*}</p>
+            <p>Where the $S$ and $M$ represent the changes over the phase boundary. If this isn't obvious, realise what I really should have done to not take shortcuts its say $G_n = G_s$, and then when I collected terms $S$ would have been $S_n - S_s$. Anyway, to write this out:</p>
+            <p>\begin{eqnarray*}
+                \frac{dH}{dT} &=& - \frac{\Delta S}{\mu_0 \Delta M} \\
+                &=& - \frac{S_n - S_s}{\mu_0 (M_n - M_s)}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>No idea. Waiting on Joel's feedback.</p>
+        </li>
+    </ol>
+</div>
+
+
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 5:</strong>
+            <ol type="a">
+                <li>What are some of the properties of a superfluid that distinguish it from a normal fluid?</li>
+                <li>Consider two regions of superfluid connected by a superleak, through which normal fluid cannot travel. From thermodynamic consideration show that it is possible for a temperature difference $\Delta T$ and a pressure difference $\Delta P$ to exist between the two regions provided $$\frac{\Delta P}{\Delta t} = \frac{S}{V}$$ where $S/V$ is the entropy per unit volume of the superfluid. Explain the relevance of this equation to the fountain effect that occurs in superfluid helium.</li>
+                <li>Sketch the temperature dependence of the specific heat capacity of liquie $^4$He near the superfluid transition temperature $T_\lambda$.</li>
+                <li>Explain how you would replot the experimental data you sketched in (c) to determine the critical exponent $\alpha$ associated with the temperature dependence of the specific heat capacity.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
             <p></p>
+        </li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong> Iron undergoes a continuous phase transition from a ferromagnet to a paramagnet at the Curie temperature, $T_c = 1043 \;\mathrm{K}$.
+            <ol type="a">
+                <li>Sketch typical arrangements of the magnetic dipole moments of the iron atoms avoce and below the transition temperature $T_c$.</li>
+                <li>Let $\vec{M}$ denote the average magnetisation for a system at constant pressure $P$ and temperature $T$. Explain why $\vec{M}$ is a suitable order parameter for the paramagnet-ferromagnet transition.</li>
+                <li>The Landau form of the Gibbs free energy can be written in the form $$G(T,P,\vec{M}) = a(T- T_c)\vec{M}\cdot\vec{M} + b(\vec{M}\cdot\vec{M})^2$$ where $a$ and $b$ are positive constants that are independent of temperature. Sketch the free energy as a function of $M \equiv \sqrt{\vec{M}\cdot\vec{M}}$ for temperatures both greater and less than $T_c$.</li>
+                <li>Use this Landau free energy to derive an expression for the temperature dependence of the order parameter. What value does the critical exponent $\beta$ defined by $$M(T) \sim (T_c - T)^\beta \;\;\;\;\; T \rightarrow T_c^-$$ have?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Thank you to the power of google-foo.</p>
+            <img src="images/mag.png" class="wide">
+        </li>
+        <li>
+            <p>Because the magnetisation is a continuous variable distinguishing between the ferromagentic state (effectively zero magnetisation) and the paramagnetic state (up to complete magnetisation).</p>
+        </li>
+        <li>
+            <p>Recyling this image. Above $T_c$ and less than $T_c$ respectively.</p>
+            <img src="images/gl.png" class="wide">
+        </li>
+        <li>
+            <p>As we are looking at when $T \rightarrow T_c$, we are looking at the phase boundary, such that $\frac{dG}{dM} = 0$.</p>
+            <p>\begin{eqnarray*}
+                \frac{dG}{dM} &=& \frac{d}{dM} \left( a(T-T_c)M^2 + bM^4 \right) \\
+                &=& 2a(T-T_c)M + 4bM^3 \\
+                0 &=& M (2a(T-T_c) + 4bM^2) \\
+                2a(T-T_c) + 4bM^2 &=& 0 \\
+                M^2 &=& \frac{2a}{4b} (T_c - T) \\
+                M &=& \left( \frac{a}{2b} (T_c _ T) \right)^{1/2}
+                \end{eqnarray*}</p>
+            <p>Thus $\beta = \frac{1}{2}$.</p>
         </li>
     </ol>
 </div>

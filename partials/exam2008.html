@@ -1,0 +1,153 @@
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 1:</strong></h5>
+        <h5>
+            <ol type="a">
+                <li>Give a clear and precise statement of the zeroth law of thermodynamics. Use it to explain what temperature is.</li>
+                <li>Give a clear, concise and precise statement of the of the first law of thermodynamics. What thermodynamic state function does it allow us to define?</li>
+                <li>Provide mechanical and molecular definitions of work and heat. Explain the difference between the change in internal energy and the change in enthalpy accompanying a chemical or physical process.</li>
+                <li>Give a version of the second law that is relevant to a system which is in equilibrium with an environment at temperature $T$ and pressure $P$. What state function is convenient to use in this situation?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>Thermal equilibrium is transitive. Temperature is a value which is the same for all objects in thermal equilibrium.</p>
+        </li>
+        <li>
+            <p>The first law states essentially that energy is conserved. It allows us to define the thermodynamic state function of (internal) energy.</p>
+        </li>
+        <li>
+            <p>For mechanical explanations: work is moving volume against a certain pressure. It is just a reformulation of force times by distance. Mechanically, I don't know how to describe heat. Disordered kinetic energy?</p>
+            <p>For molecular explanations: work is energy that is being transferred due to synchronous motion of particles. Heat is the disordered vibration/movement of molecules.</p>
+            <p>The difference between internal energy and enthalpy is that enthalpy takes into account any mechanical work against an external pressure.</p>
+        </li>
+        <li>
+            <p>The second law says that the entropy of the universe (or isolated systems) never decreases. But if we are talking constant $T$ and $P$ we are probably talking about the thermodynamic identity of the Gibbs free energy. For something a bit more rigorous, consider the following, where we have made use of the fact the Gibbs free energy decreases in a spontaneous reaction...</p>
+            <p>\begin{eqnarray*}
+                G &=& H - TS \\
+                dG +  T dS &=& dH \\
+                \text{As } dG &\le& 0 \\
+                T dS &\ge& dH
+                \end{eqnarray*}</p>
+
+        </li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 2:</strong>
+            <ol type="a">
+                <li>Derive the thermodynamic equation of state from the fundamental equation of thermodynamics. Explain the significance of the internal pressure $\pi_T$.</li>
+                <li>Derive the general relationship between the Joule-Thomson coefficient $\mu$ and isothermal Joule-Thomson coefficient $\mu_T$.</li>
+                <li>Given that the Joule-Thmson coefficient for helium is $\mu = -0.062\;\mathrm{K/atm}$. calculate the energy that must be remove as heat to maintain constant temperature when 20.0 mol of helium flows through a throttle in an isothermal Joule-Thomson experiment and the pressure drop is 100atm.</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <p>So it is asking us to get to $$\pi_T = T\left(\frac{\partial P}{\partial T}\right)_V - P$$ from $$dU = T dS - P dV$$</p>
+            <p>Given that $\pi_T = \left(\frac{\partial U}{\partial V}\right)_T$, let us just take the fundamental equation and derive with respect to $V$. We will need to use a Maxwell relation.</p>
+            <p>\begin{eqnarray*}
+                \left(\frac{\partial U}{\partial V}\right)_T &=& T \left(\frac{\partial S}{\partial V}\right)_T - P \frac{\partial V}{\partial V} \\
+                \pi_T &=& T \left(\frac{\partial P}{\partial T}\right)_V - P
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>So, we have from the formula sheet that $\mu = \left(\frac{\partial T}{\partial P}\right)_H$ and $\mu_T = \left(\frac{\partial H}{\partial P}\right)_T$. This isn't an obvious step, but we need to use one of the partial derivative equations</p>
+            <p>\begin{eqnarray*}
+                \left(\frac{\partial T}{\partial P}\right)_H \left(\frac{\partial P}{\partial H}\right)_T \left(\frac{\partial H}{\partial T}\right)_P &=& -1 \\
+                \mu \cdot \frac{1}{\mu_T} \cdot C_{P} &=& -1 \\
+                \mu_T &=& - C_P \mu
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>I dislike this question. What we have to realise upfront is that $\Delta H = Q$ (I don't know why, given this isn't constant pressure). From there what we can do is to find an equation that relates $H$ with $P$, which turns out to be $\left(\frac{\partial H}{\partial P}\right)_T = \mu_T$. From there we can math.</p>
+            <p>\begin{eqnarray*}
+                \mu_T &=& \left(\frac{\partial H}{\partial P}\right)_T \\
+                -C_P \mu &=& \frac{\partial H}{\partial P} \\
+                dH &=& -C_P \mu \;dP \\
+                \Delta H &=& - C_P \mu \Delta P \\
+                Q &=& - \left(nR\frac{f+2}{2}\right) \mu \Delta P \\
+                Q &=& - \left((20.0\;\mathrm{mol}) \cdot (8.315 \;\mathrm{J/mol/K}) \frac{5+2}{2}\right) \cdot (-0.062 \;\mathrm{K/atm})\cdot (-100 \;\mathrm{atm}) \\
+                Q &=& -3.6 \;\mathrm{kJ}
+                \end{eqnarray*}</p>
+            <p>Note that I disagree with Joel. he uses $C_V$, and I use $C_P$. Also, it seems he dropped a negative sign.</p>
+        </li>
+    </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 3:</strong> In this question, assume perfect gas behaviour.
+            <ol type="a">
+                <li>A sample of oxygen gas aof mas 96g at 25C is allowed to expand reversible and adiabatically from 5L to 10L. Calculate i) the heat transferred, ii) the work done, iii) the change in internal energy iv) the change in entropy of the gas</li>
+                <li>Consider a system consisting of 3mol $CO_2(g)$ initially at 35C and 9atm and confined to a cylinder of cross sectional area 100 cm squared. The sample is allowed to expand adiabatically against an external pressure of 2.5atm until the piston has moved outwards through 25cm. Assume that for carbon dioxide $C_{vm} = 28.8 \;\mathrm{J/K/mol}$ and calculate i) the heat transferred, ii) the word done by the gas iii) the change in internal energy of the gas.</li>
+                <li>For the process in part (b), calculate the total change in entropy (system + surroundings). What is the maximum work that could have been achieved by a reversible process between the same initial and final states?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="a">
+        <li>
+            <ol type="i">
+                <li>The process is adiabatic. $Q = 0$.</li>
+                <li>
+                    <p>Given $Q=0, \Delta U = W$. So we can either manually work out $W = - \int P dV$ or simply work out $\Delta U$ using the equipartition theorem. The latter method is easier, so I'll do that one first. Note that $\frac{1}{c} = \frac{R}{C_{vm}} = {2}{f}$</p>
+                    <p>\begin{eqnarray*}
+                        W &=& \Delta U \\
+                        &=& \frac{f}{2} nR \Delta T \\
+                        &=& \frac{f}{2}nR \left[ T_f - T_i \right] \\
+                        &=& \frac{f}{2}nR \left[ T_i \left(\frac{V_i}{V_f}\right)^{1/c} - T_i \right]  \\
+                        &=& \frac{f}{2}nR T_i \left[ \left(\frac{V_i}{V_f}\right)^{2/f} - 1 \right]  \\
+                        &=& \frac{5}{2} \cdot \left( \frac{96}{32} \;\mathrm{mol} \right) \cdot (8.315 \;\mathrm{J/K/mol}) \cdot (273+25 \;\mathrm{K}) \left[ 0.5^{2/5} - 1 \right]  \\
+                        &=& -4.5 \;\mathrm{kJ}
+                        \end{eqnarray*}</p>
+                    <p>To do it the other way by integrating the volume change, we will need to use the other adiabatic formula. Also note that $\gamma = \frac{f+2}{f}, \gamma - 1 = \frac{2}{f}$.</p>
+                    <p>\begin{eqnarray*}
+                        W &=& - \int P dV \\
+                        &=& - P_i V_i^\gamma \int V_f^{-\gamma} dV \\
+                        &=& - \frac{nRT_i}{V_i} V_i^\gamma \frac{1}{1-\gamma} \left[ V_f^{1-\gamma} - V_i^{1 - \gamma} \right] \\
+                        &=& - \frac{nRT_i}{1-\gamma} V_i^{\gamma -1} \left[ V_f^{1-\gamma} - V_i^{1 - \gamma} \right] \\
+                        &=& - \frac{nRT_i}{1-\gamma} \left[ \left(\frac{V_i}{V_f}\right)^{\gamma - 1} - 1 \right] \\
+                        &=& \frac{fnRT_i}{2} \left[ \left(\frac{V_i}{V_f}\right)^{2/f} - 1 \right] \\
+                        &=& -4.5 \;\mathrm{kJ}
+                        \end{eqnarray*}</p>
+                </li>
+                <li>Work is equal to change in internal energy.</li>
+                <li>It is adiabatic and reversible. $\Delta S = 0$.</li>
+            </ol>
+        </li>
+        <li>
+            <p>Right, so now looking at $CO_2$.</p>
+
+        </li>
+    </ol>
+</div>
+
+<!--
+<div class="question">
+<div class="q">
+<h5><strong>Question 2:</strong> QQQ
+    <ol type="a">
+        <li></li>
+    </ol>
+</h5>
+</div>
+    <ol type="a">
+        <li>
+            <p></p>
+        </li>
+    </ol>
+</div>
+-->
+<!--
+    <p>\begin{eqnarray*}
+    m_f &=& V \rho - m_p \\
+    &=& \frac{4}{3}\pi r^3 \rho - m_p \\
+    &=& \frac{4}{3} \pi (7.5\, \mathrm{m})^3 \times 1.16\, \mathrm{kg/m}^3 - 500\,\mathrm{kg} \\
+    &=& 1550 \,\mathrm{kg}
+    \end{eqnarray*}</p>
+    -->

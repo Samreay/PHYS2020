@@ -227,19 +227,21 @@
                 \end{eqnarray*}</p>
         </li>
         <li>
-            <p>Well, this question has succeeded in making me feel unbelievably stupid.</p>
-            <p>Right, so let us start off with $C = T \frac{\partial S}{\partial T}$. Use $dG = 0$ as at phase boundary. Assume $M$ is independent of $T$.</p>
+            <p>I do not think my approach to this question is correct. It involves me doing whatever I need to do to the math to make the answer work out and they trying to post-hoc justify it.</p>
+            <p>Right, so let us start off with $C = T \frac{\partial S}{\partial T}$. At the phase boundary $C$ is discontinuous, so if we apply this at the phase boundary, we will actually be finding $C_n-C_s$ because the heat capacity at this point is the difference between the heat capacities of the normal and magnetic states (lolwut).</p>
             <p>\begin{eqnarray*}
-                dG &=& - S dT - \mu_0 M dH \\
-                S dT &=& -\mu_0 M dH \\
-                S &=& -\mu_0 M \frac{dH}{dT} \\
-                T \frac{\partial S}{\partial T} &=& - T \mu_0 M \frac{\partial^2 H}{\partial T^2} \\
-                T \frac{\partial S}{\partial T} &=& 0 \\
+                C_n - C_s &=& T_c \frac{\partial S}{\partial T_c} \\
+                \text{Now, } L &=& T dS \\
+                \text{so } dS &=& d(L/T_c) \\
+                C_n - C_s &=& T_c \frac{\partial (L/T_c)}{\partial T_c} \\
+                &=& T_c \frac{\partial}{\partial T} \left[ -\mu_0 H_c \frac{dH_c}{dT} \right] \\
+                &=& -\mu_0T_c  \left[   \frac{\partial H_c}{\partial T}\frac{dH_c}{dT} + \frac{\partial^2 H_c}{\partial T^2}\right] \\
+                &=& -\mu_0T_c  \left[   \frac{\partial H_c}{\partial T}\frac{dH_c}{dT} + 0\right] \;\;\text{ as we can see from CC that it is not dependent on }T \\
+                &=& -\mu_0 T_c \left( \frac{\partial H_c}{\partial T}\right)^2
                 \end{eqnarray*}</p>
-            <p>Seems like that equals zero, as the Clausis-Clapeyron relation seems to imply $\frac{dH}{dT}$ is constant, so the second derivative goes to zero.</p>
-            <p>Don't know where to go from here...</p>
-            <p>This question is driving me nuts.</p>
+            <p>If this is correct, awesome. But the chance I would think of doing that in an exam is approximately 0.</p>
         </li>
+        <li>What critical point?</li>
     </ol>
 </div>
 

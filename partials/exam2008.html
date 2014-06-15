@@ -245,6 +245,52 @@
             <p>No idea how to do this question.</p>
         </li>
     </ol>
+</div>
+
+
+<div class="question">
+    <div class="q">
+        <h5><strong>Question 6:</strong> The van der Waals equation of state for a gas is $$\left(P + \frac{aN^2}{V^2}\right)(V-Nb) = Nk_B T$$
+            <ol type="i">
+                <li>Give a simple and brief explanation of the physical origin of the term involving the empirical constant $b$. Give a rough estimate of $b$ for oxygen.</li>
+                <li>Sketch the thermodynamically stable isotherms of pressure versus volume for the van der Waals equation.</li>
+                <li>On your sketch, clearly denote the critical pressure, critical volume and which regions correspond to gas, liquid and gas-liquid mixtures.</li>
+                <li>The critical pressure $P_c$, critical volume $V_c$ and critical temperature $T_c$ are given by $$P_c = \frac{a}{27b^2},\;\;\;V_c = 3Nb,\;\;\;kT_c = \frac{8a}{27b}$$ Close to the critical point it can be shown that the equation of state becomes $$\frac{P}{P_c} = \frac{4T}{T_c} - 3 + 6\left(1-\frac{T}{T_c}\right)\left(\frac{V}{V_c}-1\right) - \frac{3}{2}\left(\frac{V}{V_c} -1\right)^3$$ Apply the Maxwell construction to evaluate the vapour pressure as a function of temperature.</li>
+                <li>Using the results from (iv) evaluate the temperature dependence of the order parameter. What is the value of the critical exponent $\beta$ associated with the temperature dependence of the order parameter?</li>
+            </ol>
+        </h5>
+    </div>
+    <ol type="i">
+        <li>
+            <p>The physical origin of $b$ is an indication of molecular volume. It is in units of cubic meters per mol, so to estimate $b$ for oxygen we would find the molecular volume and multiple it by Avogadro's number.</p>
+        </li>
+        <li>
+            <p>So let us just rewrite the equation so we can get $P$ <a href="https://www.youtube.com/watch?v=o22i_gqAf_o">all by itself.</a></p>
+            <p>\begin{eqnarray*}
+                \left(P + \frac{aN^2}{V^2}\right)(V-Nb) &=& Nk_B T \\
+                \left(P + \frac{aN^2}{V^2}\right) &=& \frac{Nk_B T}{(V-Nb)} \\
+                P &=& \frac{Nk_B T}{(V-Nb)} - \frac{aN^2}{V^2}
+                \end{eqnarray*}</p>
+            <p>So what we can get from this is that we have a function that looks like $y = \frac{1}{x}$ centered around $Nb$, and one function which is highly negative around $V = 0$ and the increases up to zero. At high temperatures, the latter function can be ignored, as the former function is much more significant. But for low temperatures, because the strength of the first function has been decreased, the latter function will pull the area of the graph between $V=0$ and $V=Nb$ down due to how negative it is. However, we will see an odd function around the critical point due to the first term approaching infinitiy are $V\rightarrow Nb$. No, I've taken this image off the internets, but it shows all the relevant points. The negative pull before $V_c$, the odd function around the critical point, etc, etc.</p>
+            <img style="width:450px" src="images/van.png">
+        </li>
+        <li>
+            <p>Gas will be on the upper right. The dashed envelope corresponds to a liquid-gas mixture, and on the very left under the isotherm will be the liquid phase. I am not quite sure why though.</p>
+        </li>
+        <li>
+            <p>If we look at the function given to us, we can see it is cubic around the point $\frac{V}{V_c} = 1$, which means it is an odd area graph.  Thus, equal area on either side occurs obviously at the point of symmetry, which <strong>is</strong> the $\frac{V}{V_c} = 1$ point. Now, at that point, the equation actually becomes $$\frac{P}{P_c} = \frac{4T}{T_c} - 3$$</p>
+            <p>We can go further however, as we are given values for $T_c$ and $P_c$.</p>
+            <p>\begin{eqnarray*}
+                P &=& \left(\frac{4T}{T_c} - 3\right)P_c \\
+                &=& \left(\frac{4kT(27b)}{8a} - 3\right)\frac{a}{27b^2} \\
+                &=&\frac{kT}{2b} - \frac{a}{9b^2}
+                \end{eqnarray*}</p>
+        </li>
+        <li>
+            <p>What is the order parameter? It would either be $P$, $T$ or $V$, they would all work.</p>
+        </li>
+    </ol>
+</div>
 
 <!--
 <div class="question">
